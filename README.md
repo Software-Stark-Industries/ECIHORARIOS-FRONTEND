@@ -8,7 +8,6 @@
   
 - **Integrantes**:
   - Eduard Arias Rincón
-  - David Coronado Gómez
   - Fabian Ramírez Pinto
 
 ### Asignación de roles:
@@ -17,7 +16,7 @@
 |Diego Alfonso Prieto	|Product Owner    |
 |Eduard Arias	|Scrum Master    |
 |Fabian Ramírez|Developer   |
-|David Coronado |Developer   |
+
  
 
  
@@ -28,14 +27,14 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software Devel
 La plataforma esta planteada como una herramienta nueva para realizar horario, la cual tendrá como plus la planeación de varios planes de horario de preinscripción, con la opción de poderlos inscribir apenas el turno de inscripción de horarios este disponible, para ello contara con opciones visuales que le permitirán establecer cuales de las opciones de planes se le acomodan acorde al estado actual de inscripción. 
 
 
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/menu%20principal%20eci%20horarios.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/Menu%20Principal.png)
 
 
  ## Descripción del Producto
  
 Es un herramienta desarrollada por el grupo de desarrolladores “Software-Development-Industries” la cual se encarga de mejorar el servicio que presta el sistema de horarios, de la Escuela Colombiana de Ingeniería Julio Garavito. En la plataforma podemos encontrar varias funcionalidades que presta ya la plataforma de Sistemas Horarios, mediante Enlace Académico, con un Valor agregado de tener la posibilidad de tener varios planes de horario por el semestre que va a cursar, ya sean unos 5 o 6 planes. Logrando que cuando tenga su turno para inscribir materias pueda visualizar estos planes, permitiendo que, si alguno de estos le sirve y cuenta con la disponibilidad en todas las materias, pueda inscribir todas estas materias con un simple CLICK.  Esto con el fin de brindar un buen servicio a la comunidad de estudiantes. Entre ellas encontramos funciones como: Agregar materias a su horario que no sean académicas, si no de tipo extracurricular, y poder tener toda su programación por semestre en un mismo lugar. Consiguiendo así una mejor experiencia en la creación de horarios para los estudiantes de la Escuela Colombiana Julio Garavito.
 
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/servicios%20WireFrames.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/servicios.png)
 
 
 
@@ -79,7 +78,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
 
 [Presione Aqui para revisar El Manual de Usuario](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Manual%20de%20Usuario%20Software%20DEV%20IND--ECI%20Horarios.pdf)
 
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Sprints/manual%20usuario%20imag.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/portada%20manual.png)
 
   ### 1. **Acceso al sitio web**
   - Ingrese al navegador de preferencia y escriba en la barra de direcciones el siguiente URL de acceso:
@@ -88,17 +87,17 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
   ### 2.	**Inicio de Sesión**
   - Para el inicio de sesión, en la pagina principal debemos irnos a la esquina superior derecha, en donde encontraremos un botón LOGIN. 
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/menu%20principal%20eci%20horarios.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/Menu%20Principal.png)
   
   - Al dar clic en el botón, nos redirigirá al menú de acceso, en donde nos solicitara en los espacios en blanco un Correo y una contraseña, al ingresar dichos datos procedemos a darle INGRESAR.
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/Login%20Sistemas%20Horario-ECI.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/LOGIN.png)
   
   - •	Existen dos tipos de usuario llamados:
         - Administrador
-        ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/Menu%20login%20Admin.png)
+        ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/LOGIN%20ADMIN.png)
         - Estudiante
-        ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/Menu%20login%20EST.png)
+        ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/login%20EST.png)
 
   
   ### 3. **Menú de Adminsitrador**
@@ -108,7 +107,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
   3. Estadísticas
   4. Modificación Grupos.
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/Funciones%20Admin.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/agregar%20materia.png)
 
   ### 4. **Menú de Estudiante**
   
@@ -118,20 +117,20 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
   3. Realizar una Inscripción de materias.
   4. Agregar/ Quitar Materias.
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/menu%20funciones%20estudiante.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/pre%20y%20inscrip.png)
   
   ### 5. **Pre-Inscripción Materias**
   
   - •	En cada una de ellas podremos ver las opciones de plan de horario que hemos creado anteriormente.
   
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/Menu%20Pre-Inscripcion.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/preinscripcion.png)
   
   ### 6. **inscripción de Materias**
   
   - •	Al presionar el botón de INSCRIPCION, podremos visualizar nuestras opciones de horarios que hemos creado anteriormente e indicarnos cual se nos acomoda más. 
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/menu%20inscripcion%20horarios.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/inscripcion.png)
   
   
   ### 7. **Agregar/Quitar Materias**
@@ -147,7 +146,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
   - •	En donde se podrá visualizar las materias que vamos a inscribir para ese semestre. 
   
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/Menu%20Agregar--Quitar%20Materia.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/agregar%20materia.png)
   
   
 
@@ -155,7 +154,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
 
 * Se contara con dos usuarios, los cuales contaran con un servicio para el manejo de los servicios, como lo podemos ver aca:
 
-    ![Funciones admin](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/Login%20Sistemas%20Horario-ECI.png)
+    ![Funciones admin](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/LOGIN.png)
 
 * El estudiante de la ECI podra:
 
@@ -164,7 +163,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
     * Realizar una Inscripción de materias.
     * Agregar/ Quitar Materias.
 
-    ![Funciones estudiante](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/menu%20funciones%20estudiante.png)
+    ![Funciones estudiante](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/pre%20y%20inscrip.png)
 
 * El administrador de la ECI podra:
 
@@ -173,7 +172,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
     * Estadisticas.
     * Modificación Grupos.
 
-    ![Funciones admin](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/FrontEnd/WireFrames/Funciones%20Admin.png)
+    ![Funciones admin](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/preinscripcion.png)
 
 
 # **Descripción del proceso**:
@@ -181,7 +180,6 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
 #### **Integrantes**:
 
 - Eduard Arias.
-- David Coronado.
 - Fabián Ramírez Pinto.
 
 ### **Descripcion de la metodologia**
@@ -241,11 +239,11 @@ Se presento un avance aceptable para el Sprint 1, en donde se pudo ver la defini
 
 #### ***Burdown Chart***
 
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Sprints/Sprint%202%20BurdownChart%202.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Sprints/sprint%202%20BurdownChart%202.png)
 
 #### ***Backlog***
 
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Sprints/Sprint%202%20BackLog.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Sprints/sprint%202%20BackLog.png)
 
 
 ### **SPRINT 3**
@@ -271,5 +269,3 @@ Para este Sprint 3 se comenzaron a ver los rezagos de los sprint anteriores, .
 ![texto cualquiera por si no carga la imagen]()
 
  ## **Tecnologías Utilizadas**
-
-       
