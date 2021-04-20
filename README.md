@@ -1,9 +1,5 @@
 # ***Software Development Industries***
 
-## Heroku
-
-[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://eci-horarios-frontend-fr.herokuapp.com/index.html)
-
 ## ***Eci-Horarios***
 
   - **Periodo Académico**: 2021-1
@@ -42,8 +38,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
 
 
 # Despliegue en HerokuApp
->[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://eci-horarios.herokuapp.com/)
-
+[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://eci-horarios-frontend-fr.herokuapp.com/index.html)
 ## Integración Continua con CircleCI
 >[![CircleCI](https://circleci.com/gh/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI.svg?style=svg)](https://app.circleci.com/pipelines/github/Software-Development-Industries/ECI-Horarios)
 >
