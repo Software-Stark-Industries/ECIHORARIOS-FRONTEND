@@ -98,7 +98,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
         ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/Login%20Estudiante.png)
 
   
-  ### 3. **Menú de Adminsitrador**
+  ### 3. **Menú de Administrador**
   - •	Al presionar al ingresar al menú de administrador podremos acceder a estas diferentes opciones:
   1. Consultar Materias Disponibles.
   2. Añadir Materias y Grupo Administración
