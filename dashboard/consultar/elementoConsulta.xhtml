@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Detalle Elemento</title>
+
+    <!-- Custom fonts for this template -->
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="../css/sb-admin-2.css" rel="stylesheet" />
+
+    <!-- Custom styles for this page -->
+    <link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="../js/demo/datatables-demo.js"></script>
+
+
+</h:head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper" class="bg-gradient-primary"></div>
+        <script>
+            $(function () {
+                $("#sidebar-wrapper").load("../sidebar.xhtml");
+            });
+        </script>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <div id="topbar">
+                    <ui:include src="../topbar.xhtml" />
+                </div>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <!--Informacion General -->
+                    <h:form id="Form_inforGen">
+                        <h1 class="h3 mb-2 text-gray-800">Información General</h1>
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Info</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <h:dataTable class="table table-bordered" var="Elemento"
+                                        value="#{elementoBean.getElementosSeleccionados().get(0)}" style="width:100%"
+                                        width="100%" cellspacing="0"
+                                        tableStyleClass="table table-striped table-bordered p-3 mb-2 bg-primary text-white">
+                                        <p:column headerText="Identificador">
+                                            <f:facet name="header">Identificador</f:facet>
+                                            <h:outputText value="#{Elemento.getId()}" />
+                                        </p:column>
+                                        <p:column headerText="Nombre">
+                                            <f:facet name="header">Nombre</f:facet>
+                                            <h:outputText value="#{Elemento.getNombre()}" />
+                                        </p:column>
+                                        <p:column headerText="Tipo">
+                                            <f:facet name="header">Tipo</f:facet>
+                                            <h:outputText value="#{Elemento.getTipoElemento().getNombre()}" />
+                                        </p:column>
+                                        <p:column headerText="Equipo">
+                                            <f:facet name="header">Equipo</f:facet>
+                                            <h:outputText value="#{Elemento.getEquipoOb().getNombre()}" />
+                                        </p:column>
+                                        <p:column headerText="Fecha De Registro">
+                                            <f:facet name="header">Fecha De Registro</f:facet>
+                                            <h:outputText value="#{Elemento.getFechaDeRegistro()}" />
+                                        </p:column>
+                                        <p:column headerText="Estado">
+                                            <f:facet name="header">Estado</f:facet>
+                                            <h:outputText value="#{Elemento.getActivoS()}" />
+                                        </p:column>
+                                    </h:dataTable>
+                                </div>
+                            </div>
+                        </div>
+                    </h:form>
+                    <!-- Administrar Elemento -->
+                    <h:form id="Form_Equipos" rendered="#{loginBean.canEdit()}">
+                        <!-- Page Heading -->
+                        <h1 class="h3 mb-2 text-gray-800">Administracion</h1>
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">
+                                    Editar Elemento: #{elementoBean.getElementosSeleccionados().get(0).getNombre()}
+                                </h6>
+                            </div>
+                            <h:panelGrid columns="6" cellpadding="20" class="h3 mb-2 text-gray-800">
+                                <p:outputLabel for="marca" value="Marca:"
+                                    class="form-control bg-light border-0 small" />
+                                <p:inputText id="marca" name="marca" class="form-control bg-light border-0 small"
+                                    type="text" required="false"
+                                    placeholder="#{elementoBean.getElementosSeleccionados().get(0).getMarca()}"
+                                    binding="#{marca}" />
+
+                                <p:outputLabel for="referencia" value="Referencia:"
+                                    class="form-control bg-light border-0 small" />
+                                <p:inputText id="referencia" name="referencia"
+                                    class="form-control bg-light border-0 small" type="text" required="false"
+                                    placeholder="#{elementoBean.getElementosSeleccionados().get(0).getReferencia()}"
+                                    binding="#{referencia}" />
+
+                                <p:outputLabel value="Equipo: " class="form-control bg-light border-0 small" />
+                                <h:selectOneMenu name="Equipo" id="equipo" required="false" binding="#{equipo}"
+                                    type="number" class="form-control">
+                                    <f:selectItems value="#{equipoBean.getEquipoMapActivo()}" />
+                                </h:selectOneMenu>
+
+                                <p:outputLabel value="Estado:" class="form-control bg-light border-0 small" />
+                                <h:selectOneMenu name="Estado" id="estado" required="false" binding="#{estado}"
+                                    type="text" class="form-control">
+                                    <f:selectItem itemLabel="--------" itemValue="noCambia" />
+                                    <f:selectItem itemLabel="Activo" itemValue="Activo" />
+                                    <f:selectItem itemLabel="Inactivo" itemValue="Inactivo" />
+                                </h:selectOneMenu>
+                            </h:panelGrid>
+                            <div class="modal-footer">
+                                <a class="btn btn-primary" href="#" data-toggle="modal"
+                                    data-target="#confirmacionAs3">Guardar Cambios</a>
+                                <div class="modal fade" id="confirmacionAs3" tabindex="-1" role="dialog"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabeAs3">Seguro deseas realizar
+                                                    estos cambios ?</h5>
+                                                <button class="close" type="button" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">×</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">Selecciona Confirmar si deseas realizar los cambios.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-secondary" type="button"
+                                                    data-dismiss="modal">Cancelar</button>
+                                                <h:commandButton styleClass="btn btn-primary" update="Form_inforGen"
+                                                    actionListener="#{elementoBean.actualizarElemento(elementoBean.getElementosSeleccionados().get(0), marca.value, referencia.value, equipo.value,  estado.value, loginBean.usuarioCarnet)}"
+                                                    href="#" value="Confirmar" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </h:form>
+                    <!--Novedades de un elemento-->
+                    <h:form id="Form_NovElemento">
+                        <h1 class="h3 mb-2 text-gray-800">Novedades</h1>
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">
+                                    Elemento: #{elementoBean.getElementosSeleccionados().get(0).getNombre()}
+                                </h6>
+                            </div>
+                            <div class="card-body">
+                                <p:dataTable class="table table-bordered" var="novedad"
+                                    value="#{novedadBean.consultarNovedadesElemento(elementoBean.getElementosSeleccionados().get(0).getId())}"
+                                    style="width:100%" width="100%" cellspacing="0" paginator="true" rows="10"
+                                    paginatorTemplate="{CurrentPageReport} {FirstPageLink}
+                                            {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                                    currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+                                    rowsPerPageTemplate="5,10,15,20"
+                                    tableStyleClass="table table-striped table-bordered p-3 mb-2 bg-primary text-white">
+                                    <p:column headerText="Identificador">
+                                        <f:facet name="header">Identificador</f:facet>
+                                        <h:outputText value="#{novedad.getId()}" />
+                                    </p:column>
+                                    <p:column headerText="Titulo">
+                                        <f:facet name="header">Titulo</f:facet>
+                                        <h:outputText value="#{novedad.getTitulo()}" />
+                                    </p:column>
+                                    <p:column headerText="Responsable">
+                                        <f:facet name="header">Responsable</f:facet>
+                                        <h:outputText value="#{novedad.getUsuario().getCarnet()}" />
+                                    </p:column>
+                                    <p:column headerText="Equipo">
+                                        <h:outputText value="#{novedad.getEquipoObj().getId()}" />
+                                    </p:column>
+                                    <p:column headerText="Equipo">
+                                        <h:outputText value="#{novedad.getEquipoObj().getNombre()}" />
+                                    </p:column>
+                                    <p:column headerText="Elemento">
+                                        <h:outputText value="#{novedad.getElementoObj().getNombre()}" />
+                                    </p:column>
+                                    <p:column headerText="Fecha">
+                                        <h:outputText value="#{novedad.getFecha()}" />
+                                    </p:column>
+                                    <p:column headerText="Descripcion">
+                                        <h:outputText value="#{novedad.getNovedad()}" />
+                                    </p:column>
+                                </p:dataTable>
+                            </div>
+                        </div>
+                    </h:form>
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright - Your Website 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <div id="script"></div>
+    <script>
+        $(function () {
+            $("#script").load("../script.html");
+        });
+    </script>
+
+</body>
+
+</html>
