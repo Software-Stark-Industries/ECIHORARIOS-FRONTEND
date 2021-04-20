@@ -10,8 +10,8 @@ var login = (function () {
     }
 
     function doLogin() {
-        var email = document.getElementById("email").val();
-        var passw = document.getElementById("password").val();
+        var email = document.getElementById("email");
+        var passw = document.getElementById("password");
         var user = {email: email, password: passw};
         apiclient.postLogin(user)
             .then(function(data, textStatus, request) {
