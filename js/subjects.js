@@ -76,17 +76,22 @@ var subjects = (function () {
     }
 
     function addGroup(){
-        var groupSubjectInputId = $("#subjectInputId").val();
-        var groupInputRoom = $("#subjectInputName").val();
-        var groupInputProfessor = $("#subjectInputDescription").val();
-        var subjectInputProgram = $("#subjectInputProgram").val();
-        var subject = {id: subjectInputId,
-            nombre: subjectInputNombre,
-            description:subjectInputDescription,
-            program:subjectInputProgram
+        var subjectInputGroupId = $("#subjectInputGroupId").val();
+        var groupInputRoom = $("#groupInputRoom").val();
+        var groupInputProfessor = $("#groupInputProfessor").val();
+        var groupInputCapacity = $("#groupInputCapacity").val();
+        var groupInputHInicio = $("#groupInputHInicio").val();
+        var groupInputHFin = $("#groupInputHFin").val();
+
+        var group = {
+            room: groupInputRoom,
+            professor:groupInputProfessor,
+            capacity:groupInputCapacity,
+            hourOfInit:groupInputHInicio,
+            hourOfEnd:groupInputHFin
         };
-        apiclient.addSubject(subject).then(function(data, textStatus, request) {
-            alert("Materia añadida exitosamente");
+        apiclient.addGroup(group,subjectInputGroupId).then(function(data, textStatus, request) {
+            alert("Grupo añadido exitosamente");
         });
     }
 
