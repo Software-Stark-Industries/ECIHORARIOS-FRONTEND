@@ -1,4 +1,5 @@
 # ***Software Development Industries***
+
 ## ***Eci-Horarios***
 
   - **Periodo Académico**: 2021-1
@@ -20,25 +21,24 @@
  
   ## Descripción General
  
-Es un herramienta desarrollada por el grupo de desarrolladores “Software Development Industries” la cual se encarga de mejorar el servicio que presta la universidad para la asignación y creación de horarios para la escuela colombiana de ingeniería. Para ello se planteó y creo una plataforma innovadora que cumplirá con los requerimientos de los estudiantes y solucionará las falencias de la plataforma actual usada, para ello se creo un aplicativo web que permitirá hacer uso de varios usuarios para cumplir con los requerimientos para realizar horarios. 
+Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark-Industries” la cual se encarga de mejorar el servicio que presta la universidad para la asignación y creación de horarios para la escuela colombiana de ingeniería. Para ello se planteó y creo una plataforma innovadora que cumplirá con los requerimientos de los estudiantes y solucionará las falencias de la plataforma actual usada, para ello se creo un aplicativo web que permitirá hacer uso de varios usuarios para cumplir con los requerimientos para realizar horarios. 
 
 La plataforma esta planteada como una herramienta nueva para realizar horario, la cual tendrá como plus la planeación de varios planes de horario de preinscripción, con la opción de poderlos inscribir apenas el turno de inscripción de horarios este disponible, para ello contara con opciones visuales que le permitirán establecer cuales de las opciones de planes se le acomodan acorde al estado actual de inscripción. 
 
 
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/Menu%20Principal.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/Paguina%20principal%20eci%20horarios.png)
 
 
  ## Descripción del Producto
  
-Es un herramienta desarrollada por el grupo de desarrolladores “Software-Development-Industries” la cual se encarga de mejorar el servicio que presta el sistema de horarios, de la Escuela Colombiana de Ingeniería Julio Garavito. En la plataforma podemos encontrar varias funcionalidades que presta ya la plataforma de Sistemas Horarios, mediante Enlace Académico, con un Valor agregado de tener la posibilidad de tener varios planes de horario por el semestre que va a cursar, ya sean unos 5 o 6 planes. Logrando que cuando tenga su turno para inscribir materias pueda visualizar estos planes, permitiendo que, si alguno de estos le sirve y cuenta con la disponibilidad en todas las materias, pueda inscribir todas estas materias con un simple CLICK.  Esto con el fin de brindar un buen servicio a la comunidad de estudiantes. Entre ellas encontramos funciones como: Agregar materias a su horario que no sean académicas, si no de tipo extracurricular, y poder tener toda su programación por semestre en un mismo lugar. Consiguiendo así una mejor experiencia en la creación de horarios para los estudiantes de la Escuela Colombiana Julio Garavito.
+Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark-Industries” la cual se encarga de mejorar el servicio que presta el sistema de horarios, de la Escuela Colombiana de Ingeniería Julio Garavito. En la plataforma podemos encontrar varias funcionalidades que presta ya la plataforma de Sistemas Horarios, mediante Enlace Académico, con un Valor agregado de tener la posibilidad de tener varios planes de horario por el semestre que va a cursar, ya sean unos 5 o 6 planes. Logrando que cuando tenga su turno para inscribir materias pueda visualizar estos planes, permitiendo que, si alguno de estos le sirve y cuenta con la disponibilidad en todas las materias, pueda inscribir todas estas materias con un simple CLICK.  Esto con el fin de brindar un buen servicio a la comunidad de estudiantes. Entre ellas encontramos funciones como: Agregar materias a su horario que no sean académicas, si no de tipo extracurricular, y poder tener toda su programación por semestre en un mismo lugar. Consiguiendo así una mejor experiencia en la creación de horarios para los estudiantes de la Escuela Colombiana Julio Garavito.
 
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/servicios.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/objetivos%20eci%20horarios.png)
 
 
 
 # Despliegue en HerokuApp
->[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://eci-horarios.herokuapp.com/)
-
+[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://eci-horarios-frontend-fr.herokuapp.com/index.html)
 ## Integración Continua con CircleCI
 >[![CircleCI](https://circleci.com/gh/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI.svg?style=svg)](https://app.circleci.com/pipelines/github/Software-Development-Industries/ECI-Horarios)
 >
@@ -85,17 +85,17 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
   ### 2.	**Inicio de Sesión**
   - Para el inicio de sesión, en la pagina principal debemos irnos a la esquina superior derecha, en donde encontraremos un botón LOGIN. 
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/Menu%20Principal.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/boton%20login.png)
   
   - Al dar clic en el botón, nos redirigirá al menú de acceso, en donde nos solicitara en los espacios en blanco un Correo y una contraseña, al ingresar dichos datos procedemos a darle INGRESAR.
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/LOGIN.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/LOGIN%20PRINCIPAL.png)
   
   - •	Existen dos tipos de usuario llamados:
         - Administrador
-        ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/LOGIN%20ADMIN.png)
+        ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/login%20Admin.png)
         - Estudiante
-        ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/login%20EST.png)
+        ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/Login%20Estudiante.png)
 
   
   ### 3. **Menú de Adminsitrador**
@@ -192,7 +192,7 @@ Mediante este enlace se podra acceder a la Herramienta Taiga y conocer el proces
 
 [Taiga Software Development Industries--ECI Horarios](https://tree.taiga.io/project/fabimauri47-eci-horarios/timeline).
 
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Sprints/PAG%20Principal%20TAIGA.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Sprints/menu%20taiga.png)
 
 
 ## ***SPRINTS y release-burndown chart***
@@ -210,11 +210,11 @@ Para este Sprint se usuaron las siguientes historias de usuario propuestas, con 
 
 #### ***Burdown Chart***
 
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Sprints/Sprint%201%20burdown%20chart.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Sprints/Sprint%201%20burdown%20chart.png)
 
 #### ***Backlog***
 
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Sprints/Sprint%201%20BackLog.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Sprints/Sprint%201%20BackLog.png)
 
 
 ### **SPRINT 2**
@@ -230,7 +230,7 @@ Para este Sprint 2 se usuaron las siguientes historias de usuario propuestas, co
 - Análisis Estático: Código y Pruebas
 - Realización Presentación Segunda Entrega
 
-Se presento un avance aceptable para el Sprint 1, en donde se pudo ver la definición del proyecto y un bosquejo de como serían las funciones. para el Sprint 2, se presentó un avance tardío para el proyecto, ya que no se pudo realizar una integración completa del proyecto, debido a problemas con la coordinación del trabajo y falta de trabajo por dos de sus integrantes del grupo, lo esperado para este Sprint 2 es que hubieran cosas ya funcionando, mas solo una persona trabajando, no permite que se realice todo a tiempo y bien implementado. El avance para este Sprint 2 es nulo y muy poco a lo requerido para esta entrega, como lo podemos ver en el burdown chart y backlog.
+Se presento un avance aceptable para el Sprint 1, en donde se pudo ver la definición del proyecto y un bosquejo de como serían las funciones. para el Sprint 2, se presentó un avance tardío para el proyecto, ya que no se pudo realizar una integración completa del proyecto, debido a problemas con la coordinación del trabajo y falta de trabajo por dos de sus integrantes del grupo, lo esperado para este Sprint 2 es que hubieran cosas ya funcionando, mas solo una persona trabajando, permitio que solo hubieran pocas cosas implementadas y algunas funcionalidades. El avance para este Sprint 2 es bueno y y medio completo a lo requerido para esta entrega, como lo podemos ver en el burdown chart y backlog.
 
 
 
