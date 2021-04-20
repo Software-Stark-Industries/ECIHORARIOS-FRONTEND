@@ -120,7 +120,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
   - •	En cada una de ellas podremos ver las opciones de plan de horario que hemos creado anteriormente.
   
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/preinscripcion.pngImg/Manual%20de%20Usuario/preinscripcion.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/preinscripcion.png)
   
   ### 6. **inscripción de Materias**
   
@@ -129,7 +129,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
   ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/inscripcion.png)
   
   
-  ### 7. **8.	Añadir Materias y Grupos Administración**
+  ### 7. **Añadir Materias y Grupos Administración**
   
   - •	AL presionar el botón de añadir Materias y Grupos Administración podremos agregar materias que vayamos a cursar en el periodo académico.
   - •	En ella encontraremos cuatro tipos de opciones:
