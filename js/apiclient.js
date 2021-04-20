@@ -10,6 +10,19 @@ var apiclient = (function () {
         return data;
     }
 
+    function addSubject(subject){
+        var data = $.ajax({
+            url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects",
+            type: "POST",
+            data: JSON.stringify(subject),
+            contentType: "application/json",
+            error: function (request){
+                alert(request.responseText);
+            }
+        });
+        return data;
+    }
+
     function getSubject(idSubject,callback){
         var data = $.ajax({
             url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects/"+idSubject,
@@ -27,7 +40,8 @@ var apiclient = (function () {
 
     return {
         postLogin:postLogin,
-        getSubject:getSubject
+        getSubject:getSubject,
+        addSubject:addSubject
     };
 
 })();

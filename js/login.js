@@ -15,9 +15,11 @@ var login = (function () {
         var user = {email: email, password: passw};
         apiclient.postLogin(user)
             .then(function(data, textStatus, request) {
+                console.log(data);
                 localStorage.setItem("idUser",data.id);
                 localStorage.setItem("username",data.email);
                 localStorage.setItem("isLogged",true);
+                localStorage.setItem("isAdmin",data.admin);
                 window.location.href='index.html';
             }).catch( (e) => {
                 alert("Credenciales invalidas");
@@ -28,6 +30,7 @@ var login = (function () {
         localStorage.removeItem("idUser");
         localStorage.removeItem("username");
         localStorage.removeItem("isLogged");
+        localStorage.removeItem("isAdmin");
         alert("Logout exitoso");
     }
 
