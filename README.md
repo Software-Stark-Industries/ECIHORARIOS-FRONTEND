@@ -14,8 +14,7 @@
 |     Nombre    |     Rol         |
 |--------------|------------- |
 |Diego Alfonso Prieto	|Product Owner    |
-|Eduard Arias	|Scrum Master    |
-|Fabian Ramírez|Developer   |
+|Fabian Ramírez|Scrum Master  |
 
  
 
