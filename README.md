@@ -215,11 +215,11 @@ Para este Sprint se usuaron las siguientes historias de usuario propuestas, con 
 
 #### ***Burdown Chart***
 
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Sprints/Sprint%201%20burdown%20chart.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Sprints/Sprint%201%20burdown%20chart.png)
 
 #### ***Backlog***
 
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Sprints/Sprint%201%20BackLog.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Sprints/Sprint%201%20BackLog.png)
 
 
 ### **SPRINT 2**
