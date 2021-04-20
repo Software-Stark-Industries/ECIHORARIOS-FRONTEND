@@ -26,14 +26,14 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
 La plataforma esta planteada como una herramienta nueva para realizar horario, la cual tendrá como plus la planeación de varios planes de horario de preinscripción, con la opción de poderlos inscribir apenas el turno de inscripción de horarios este disponible, para ello contara con opciones visuales que le permitirán establecer cuales de las opciones de planes se le acomodan acorde al estado actual de inscripción. 
 
 
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/Menu%20Principal.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/Paguina%20principal%20eci%20horarios.png)
 
 
  ## Descripción del Producto
  
 Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark-Industries” la cual se encarga de mejorar el servicio que presta el sistema de horarios, de la Escuela Colombiana de Ingeniería Julio Garavito. En la plataforma podemos encontrar varias funcionalidades que presta ya la plataforma de Sistemas Horarios, mediante Enlace Académico, con un Valor agregado de tener la posibilidad de tener varios planes de horario por el semestre que va a cursar, ya sean unos 5 o 6 planes. Logrando que cuando tenga su turno para inscribir materias pueda visualizar estos planes, permitiendo que, si alguno de estos le sirve y cuenta con la disponibilidad en todas las materias, pueda inscribir todas estas materias con un simple CLICK.  Esto con el fin de brindar un buen servicio a la comunidad de estudiantes. Entre ellas encontramos funciones como: Agregar materias a su horario que no sean académicas, si no de tipo extracurricular, y poder tener toda su programación por semestre en un mismo lugar. Consiguiendo así una mejor experiencia en la creación de horarios para los estudiantes de la Escuela Colombiana Julio Garavito.
 
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/servicios.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/objetivos%20eci%20horarios.png
 
 
 
@@ -85,17 +85,17 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
   ### 2.	**Inicio de Sesión**
   - Para el inicio de sesión, en la pagina principal debemos irnos a la esquina superior derecha, en donde encontraremos un botón LOGIN. 
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/Menu%20Principal.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/LOGIN%20PRINCIPAL.png)
   
   - Al dar clic en el botón, nos redirigirá al menú de acceso, en donde nos solicitara en los espacios en blanco un Correo y una contraseña, al ingresar dichos datos procedemos a darle INGRESAR.
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/LOGIN.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/LOGIN%20PRINCIPAL.png)
   
   - •	Existen dos tipos de usuario llamados:
         - Administrador
-        ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/LOGIN%20ADMIN.png)
+        ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/login%20Admin.png)
         - Estudiante
-        ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/login%20EST.png)
+        ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/Login%20Estudiante.png)
 
   
   ### 3. **Menú de Adminsitrador**
