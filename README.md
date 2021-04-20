@@ -26,7 +26,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
 La plataforma esta planteada como una herramienta nueva para realizar horario, la cual tendrá como plus la planeación de varios planes de horario de preinscripción, con la opción de poderlos inscribir apenas el turno de inscripción de horarios este disponible, para ello contara con opciones visuales que le permitirán establecer cuales de las opciones de planes se le acomodan acorde al estado actual de inscripción. 
 
 
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/Paguina%20principal%20eci%20horarios.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/objetivos%20eci%20horarios.png)
 
 
  ## Descripción del Producto
