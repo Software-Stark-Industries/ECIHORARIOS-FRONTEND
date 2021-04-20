@@ -74,13 +74,13 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
 
 ## **Manual de Usuario**
 
-[Presione Aqui para revisar El Manual de Usuario](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Manual%20de%20Usuario%20Software%20DEV%20IND--ECI%20Horarios.pdf)
+[Presione Aqui para revisar El Manual de Usuario](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Manual%20de%20Usuario%20Software%20Stark%20%20Industries--ECI%20Horarios.pdf)
 
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/portada%20manual.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/portada%20manual%20de%20usuario.png)
 
   ### 1. **Acceso al sitio web**
   - Ingrese al navegador de preferencia y escriba en la barra de direcciones el siguiente URL de acceso:
-      https://eci-horarios.herokuapp.com/ 
+      https://eci-horarios-frontend-fr.herokuapp.com/index.html 
   
   ### 2.	**Inicio de Sesión**
   - Para el inicio de sesión, en la pagina principal debemos irnos a la esquina superior derecha, en donde encontraremos un botón LOGIN. 
@@ -100,12 +100,11 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
   
   ### 3. **Menú de Adminsitrador**
   - •	Al presionar al ingresar al menú de administrador podremos acceder a estas diferentes opciones:
-  1. Agregar/ Quitar Materia.
-  2. Materias Inscritas
-  3. Estadísticas
-  4. Modificación Grupos.
+  1. Consultar Materias Disponibles.
+  2. Añadir Materias y Grupo Administración
+
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/agregar%20materia.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/menu%20principal%20admin.png)
 
   ### 4. **Menú de Estudiante**
   
@@ -113,16 +112,15 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
   1. Consultar Materias disponibles.
   2. Realizar una Preinscripción de materias.
   3. Realizar una Inscripción de materias.
-  4. Agregar/ Quitar Materias.
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/pre%20y%20inscrip.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/menu%20principal%20estudiante.png)
   
   ### 5. **Pre-Inscripción Materias**
   
   - •	En cada una de ellas podremos ver las opciones de plan de horario que hemos creado anteriormente.
   
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/preinscripcion.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/preinscripcion.pngImg/Manual%20de%20Usuario/preinscripcion.png)
   
   ### 6. **inscripción de Materias**
   
@@ -131,23 +129,34 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
   ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/inscripcion.png)
   
   
-  ### 7. **Agregar/Quitar Materias**
+  ### 7. **8.	Añadir Materias y Grupos Administración**
   
-  - •	AL presionar el botón de Agregar/Quitar Materia podremos agregar materias que vayamos a cursar en el periodo académico.
+  - •	AL presionar el botón de añadir Materias y Grupos Administración podremos agregar materias que vayamos a cursar en el periodo académico.
   - •	En ella encontraremos cuatro tipos de opciones:
   
-  1. Agregar
-  2. Quitar
-  3. Detalles
-  4. Actualizar
+  1. Ingrese el Id de la materia.
+  2. Ingrese el nombre de la materia.
+  3. Ingrese la descripción de la materia.
+  4. Ingrese el programa de la materia.
   
-  - •	En donde se podrá visualizar las materias que vamos a inscribir para ese semestre. 
-  
-  
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/agregar%20materia.png)
+  - • En donde se podrá visualizar de la siguiente forma:
   
   
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/agregar%20materia.png)
+  
+  - • AL presionar el botón de Agregar Grupo a Materia podremos agregar materias que se van a cursar en cada carrera.
+  - •	En ella encontraremos las siguientes opciones:
+  
+  1. Ingresar el id de la materia
+  2. Ingresar el salón del Grupo.
+  3. Ingrese el nombre del profesor del grupo.
+  4. Ingrese el número de cupos.
+  5. Ingrese la hora de inicio de la clase.
+  6. Ingrese la hora de fin de la clase. 
 
+- • En donde se podrá visualizar de la siguiente forma:
+
+ ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/agregar%20grupo%20materia.png)
 ## Funcionalidades mas Importantes
 
 * Se contara con dos usuarios, los cuales contaran con un servicio para el manejo de los servicios, como lo podemos ver aca:
@@ -159,16 +168,15 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
     * Consultar Materias disponibles.
     * Realizar una Pre-inscripción de materias.
     * Realizar una Inscripción de materias.
-    * Agregar/ Quitar Materias.
+    
 
     ![Funciones estudiante](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/pre%20y%20inscrip.png)
 
 * El administrador de la ECI podra:
 
-    * Agregar/ Quitar Materia.
-    * Materias Inscritas.
-    * Estadisticas.
-    * Modificación Grupos.
+    * Consultar Materias Disponibles.
+    * Añadir Materias y Grupo Administración
+   
 
     ![Funciones admin](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/preinscripcion.png)
 
