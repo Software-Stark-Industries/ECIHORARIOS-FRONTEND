@@ -230,7 +230,7 @@ Para este Sprint 2 se usuaron las siguientes historias de usuario propuestas, co
 - Análisis Estático: Código y Pruebas
 - Realización Presentación Segunda Entrega
 
-Se presento un avance aceptable para el Sprint 1, en donde se pudo ver la definición del proyecto y un bosquejo de como serían las funciones. para el Sprint 2, se presentó un avance tardío para el proyecto, ya que no se pudo realizar una integración completa del proyecto, debido a problemas con la coordinación del trabajo y falta de trabajo por dos de sus integrantes del grupo, lo esperado para este Sprint 2 es que hubieran cosas ya funcionando, mas solo una persona trabajando, no permite que se realice todo a tiempo y bien implementado. El avance para este Sprint 2 es nulo y muy poco a lo requerido para esta entrega, como lo podemos ver en el burdown chart y backlog.
+Se presento un avance aceptable para el Sprint 1, en donde se pudo ver la definición del proyecto y un bosquejo de como serían las funciones. para el Sprint 2, se presentó un avance tardío para el proyecto, ya que no se pudo realizar una integración completa del proyecto, debido a problemas con la coordinación del trabajo y falta de trabajo por dos de sus integrantes del grupo, lo esperado para este Sprint 2 es que hubieran cosas ya funcionando, mas solo una persona trabajando, permitio que solo hubieran pocas cosas implementadas y algunas funcionalidades. El avance para este Sprint 2 es bueno y y medio completo a lo requerido para esta entrega, como lo podemos ver en el burdown chart y backlog.
 
 
 
