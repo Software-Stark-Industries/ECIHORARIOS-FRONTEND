@@ -7,7 +7,6 @@
   
   
 - **Integrantes**:
-  - Eduard Arias Rincón
   - Fabian Ramírez Pinto
 
 ### Asignación de roles:
@@ -52,24 +51,24 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
 ## **Arquitecura y Diseño**
 
 ### Diagrama de Clase
-[Presione Aqui para revisar El Diagrama De Clases](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/app/ECI_Horarios.asta)
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Diagramas/ECI_Horarios%20Diagrama%20clases.png)
+[Presione Aqui para revisar El Diagrama De Clases](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/tree/main/design/CasosDeUso)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Diagramas/ECI_Horarios%20Diagrama%20clases.png)
 
 ### Diagrama de Entidad Relación
-[Presione Aqui para revisar El Diagrama De Entidad Relación](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/CasosDeUso/ProyectCasosDeUso.asta)
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Diagramas/Funciones.png)
+[Presione Aqui para revisar El Diagrama De Entidad Relación](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/tree/main/design/CasosDeUso)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Diagramas/Funciones.png)
 
 ### Diagrama de Despliegue
-[Presione Aqui para revisar El Diagrama De Despliegue](https://github.com/Software-Development-Industries/ECI-Horarios/tree/master/design/Diagrama%20de%20Despliegue)
+[Presione Aqui para revisar El Diagrama De Despliegue](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/tree/main/design/Diagrama%20de%20Despliegue)
 ![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Diagramas/ECI%20Horarios%20Diagrama%20De%20Despliegue.png)
 
 ### Diagrama de Casos de Uso
-[Presione Aqui para revisar El Diagrama De Casos de usos](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/design/CasosDeUso/ProyectCasosDeUso.asta)
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Diagramas/Consultas%20Operativas.png)
+[Presione Aqui para revisar El Diagrama De Casos de usos](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/tree/main/design/CasosDeUso)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Diagramas/Consultas%20Operativas.png)
 
 ### Diagrama de Componentes
-[Presione Aqui para revisar El Diagrama De Componentes](https://github.com/Software-Development-Industries/ECI-Horarios/tree/master/design/Diagrama%20de%20Componentes)
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Diagramas/ECI-Horarios%20Diagrama%20Componentes.png)
+[Presione Aqui para revisar El Diagrama De Componentes](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/tree/main/design/Diagrama%20de%20Componentes)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Diagramas/ECI-Horarios%20Diagrama%20Componentes.png)
 
 
 
