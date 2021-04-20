@@ -177,7 +177,6 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
 
 #### **Integrantes**:
 
-- Eduard Arias.
 - Fabián Ramírez Pinto.
 
 ### **Descripcion de la metodologia**
