@@ -60,7 +60,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Devel
 
 ### Diagrama de Despliegue
 [Presione Aqui para revisar El Diagrama De Despliegue](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/tree/main/design/Diagrama%20de%20Despliegue)
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Diagramas/ECI%20Horarios%20Diagrama%20De%20Despliegue.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Diagramas/ECI%20Horarios%20Diagrama%20De%20Despliegue.png)
 
 ### Diagrama de Casos de Uso
 [Presione Aqui para revisar El Diagrama De Casos de usos](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/tree/main/design/CasosDeUso)
