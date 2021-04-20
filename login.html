@@ -45,27 +45,23 @@
                     <span class="login100-form-title p-b-34 p-t-27">Log in</span>
 
                     <div class="wrap-input100 validate-input" data-validate="Enter username">
-                        <p:inputText name="username" class="input100" id="userName" type="text" placeholder="Username"
-                            value="#{loginBean.userName}" />
+                        <input class="input100" type="text" id="email" name="email" required
+                               minlength="4" maxlength="200" size="10">
+
                         <!--<input class="input100" type="text" name="username" placeholder="Username"/>-->
                         <span class="focus-input100" data-placeholder="&#xf207;"></span>
                     </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Enter password">
-                        <p:inputText name="password" class="input100" type="password" id="password"
-                            placeholder="Password" value="#{loginBean.password}" />
+                        <input class="input100" type="password" id="password" name="password" required
+                               minlength="4" maxlength="200" size="10">
                         <!--<input class="input100" type="password" name="pass" placeholder="Password"/>-->
                         <span class="focus-input100" data-placeholder="&#xf191;"></span>
                     </div>
 
-                    <div class="contact100-form-checkbox">
-                        <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me" />
-                        <label class="label-checkbox100" for="ckb1">Remember me</label>
-                    </div>
 
                     <div class="container-login100-form-btn">
-                        <p:commandButton class="login100-form-btn" action="#{loginBean.login()}" value="Login"
-                            update="LoginForm" ajax="false" />
+                        <button id ="login" type="button"  onclick="login.doLogin()" class="btn btn-primary" style="margin-top: 5%;">Connect </button>
                     </div>
 
                     <div class="text-center p-t-90">
@@ -99,7 +95,10 @@
     <!--===============================================================================================-->
     <script src="vendor/countdowntime/countdowntime.js"></script>
     <!--===============================================================================================-->
-    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/apiclient.js"></script>
+
+
 
 </h:body>
 
