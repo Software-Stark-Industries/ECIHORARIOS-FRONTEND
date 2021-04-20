@@ -47,8 +47,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
 
 ## Calidad del Codigo con Codacy
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b62c449e43f24a86803f524a67d373ea)](https://app.codacy.com/gh/Software-Development-Industries/ECI-Horarios/dashboard)
-
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/8f5d1fad7c8846f5a61b54a5264b55a1)](https://www.codacy.com/gh/Software-Stark-Industries/ECIHORARIOS-FRONTEND/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Software-Stark-Industries/ECIHORARIOS-FRONTEND&amp;utm_campaign=Badge_Grade)
  
 ## **Arquitecura y Diseño**
 
