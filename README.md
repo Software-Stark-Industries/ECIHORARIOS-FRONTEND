@@ -161,7 +161,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
 
 * Se contara con dos usuarios, los cuales contaran con un servicio para el manejo de los servicios, como lo podemos ver aca:
 
-    ![Funciones admin](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/LOGIN.png)
+    ![Funciones admin](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/servicios%20eci%20horarios.png)
 
 * El estudiante de la ECI podra:
 
@@ -170,7 +170,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
     * Realizar una Inscripción de materias.
     
 
-    ![Funciones estudiante](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/pre%20y%20inscrip.png)
+    ![Funciones estudiante](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/fun%20principal%20estudian.png)
 
 * El administrador de la ECI podra:
 
@@ -178,7 +178,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
     * Añadir Materias y Grupo Administración
    
 
-    ![Funciones admin](https://github.com/Software-Development-Industries/ECI-Horarios/blob/master/Img/Manual%20de%20Usuario/preinscripcion.png)
+    ![Funciones admin](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/funciones%20princ%20admin.png)
 
 
 # **Descripción del proceso**:
