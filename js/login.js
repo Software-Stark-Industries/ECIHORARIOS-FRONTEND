@@ -21,8 +21,6 @@ var login = (function () {
                 localStorage.setItem("isLogged",true);
                 localStorage.setItem("isAdmin",data.admin);
                 window.location.href='index.html';
-            }).catch( (e) => {
-                alert("Credenciales invalidas");
         });
     }
 
@@ -32,6 +30,7 @@ var login = (function () {
         localStorage.removeItem("isLogged");
         localStorage.removeItem("isAdmin");
         alert("Logout exitoso");
+        window.location.href='index.html';
     }
 
     return {
