@@ -198,7 +198,7 @@ En total fueron 3 Sprint, y todo el grupo se puso de acuerdo para la asiganacion
 
 Mediante este enlace se podra acceder a la Herramienta Taiga y conocer el proceso del Proyecto: 
 
-[Taiga Software Development Industries--ECI Horarios](https://tree.taiga.io/project/fabimauri47-eci-horarios/timeline).
+[Taiga Software Stark Industries--ECI Horarios](https://tree.taiga.io/project/fabimauri47-eci-horarios/timeline).
 
 ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Sprints/menu%20taiga.png)
 
