@@ -39,8 +39,10 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
 
 # Despliegue en HerokuApp
 [![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://eci-horarios-frontend-fr.herokuapp.com/index.html)
+
 ## Integración Continua con CircleCI
->[![CircleCI](https://circleci.com/gh/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI.svg?style=svg)](https://app.circleci.com/pipelines/github/Software-Development-Industries/ECI-Horarios)
+
+>[![CircleCI](https://circleci.com/gh/Software-Stark-Industries/ECIHORARIOS-FRONTEND.svg?style=svg&circle-token=4ed1cd71a1b6e00a3f85c762211a3f05676111ad)](https://app.circleci.com/pipelines/github/Software-Stark-Industries/ECIHORARIOS-FRONTEND)
 >
 
 ## Calidad del Codigo con Codacy
