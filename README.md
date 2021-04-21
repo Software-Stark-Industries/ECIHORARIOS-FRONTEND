@@ -55,17 +55,13 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
 [Presione Aqui para revisar El Diagrama De Clases](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/tree/main/design/CasosDeUso)
 ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Diagramas/ECI_Horarios%20Diagrama%20clases.png)
 
-### Diagrama de Entidad Relación
+### Diagrama de Casos de Uso
 [Presione Aqui para revisar El Diagrama De Entidad Relación](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/tree/main/design/CasosDeUso)
 ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Diagramas/Funciones.png)
 
 ### Diagrama de Despliegue
 [Presione Aqui para revisar El Diagrama De Despliegue](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/tree/main/design/Diagrama%20de%20Despliegue)
 ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Diagramas/ECI%20Horarios%20Diagrama%20De%20Despliegue.png)
-
-### Diagrama de Casos de Uso
-[Presione Aqui para revisar El Diagrama De Casos de usos](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/tree/main/design/CasosDeUso)
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Diagramas/Consultas%20Operativas.png)
 
 ### Diagrama de Componentes
 [Presione Aqui para revisar El Diagrama De Componentes](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/tree/main/design/Diagrama%20de%20Componentes)
