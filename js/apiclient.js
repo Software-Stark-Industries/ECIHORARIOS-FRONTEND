@@ -15,7 +15,8 @@ var apiclient = (function () {
 
     function addSubject(subject){
         var data = $.ajax({
-            url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects",
+            //url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects",
+            url: "http://localhost:8080/api/v1/subjects",
             type: "POST",
             data: JSON.stringify(subject),
             contentType: "application/json",
@@ -27,8 +28,10 @@ var apiclient = (function () {
     }
 
     function addGroup(group,subjectId){
+        console.log("En apiclient: ",group);
         var data = $.ajax({
-            url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects/"+subjectId,
+            //url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects/"+subjectId,
+            url: "http://localhost:8080/api/v1/subjects/"+subjectId,
             type: "POST",
             data: JSON.stringify(group),
             contentType: "application/json",
@@ -40,8 +43,10 @@ var apiclient = (function () {
     }
 
     function getSubject(idSubject,callback){
+        console.log("Entrando en getSubject!: ",idSubject);
         var data = $.ajax({
-            url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects/"+idSubject,
+            //url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects/"+idSubject,
+            url: "http://localhost:8080/api/v1/subjects/"+idSubject,
             type: "GET",
             success : function (data, text) {
                 callback(data);

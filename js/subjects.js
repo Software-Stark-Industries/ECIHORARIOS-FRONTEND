@@ -24,34 +24,44 @@ var subjects = (function () {
         function _map(list){
             var mapList = null;
             return mapList = list.map(function(group){
+                console.log("GROUP FROM BACK: ",group);
                 return {
+                    grupo:group.id,
                     salon:group.room,
                     profesor:group.professor,
                     cupos:group.capacity,
                     hInicio:group.hourOfInit,
                     hFin:group.hourOfEnd,
+                    dias:group.dias
                 };
             });
         }
 
         function _table(subject){
             var listGroups = _map(subject.groups);
+            console.log("SUBJECT FROM BACK: ",listGroups);
             if (listGroups.length===0) {
                 alert("No se encontraron grupos para esa materia");
             }
             else{
-                $("#table_subject > tbody").empty();
+                $("#table_subject > tbody").empty();                
                 listGroups.map(function(g){
-                    console.log(g);
-                    $("#table_subject > tbody").append(
-                        "<tr>" +
-                        "<td>" + g.salon+ "</td>"+
-                        "<td>" + g.profesor+ "</td>"+
-                        "<td>" + g.cupos + "</td>"+
-                        "<td>" + g.hInicio + "</td>"+
-                        "<td>" + g.hFin + "</td>"+
-                        "</tr>"
-                    );
+                    console.log("ESTE ES EL GROUP DE SUBJECT: "+g);
+                    console.log("Dias: ",g.dias);
+                    for(let i=0;i<g.dias.length;i++){
+                        $("#table_subject > tbody").append(
+                            "<tr>" +                        
+                            "<td>" + g.grupo+ "</td>"+
+                            "<td>" + g.salon+ "</td>"+
+                            "<td>" + g.profesor+ "</td>"+
+                            "<td>" + g.cupos + "</td>"+
+                            "<td>" + g.hInicio + "</td>"+
+                            "<td>" + g.hFin + "</td>"+
+                            "<td>" + g.dias[i] + "</td>"+
+                            "</tr>"
+                        );
+                    }                                                          
+                                        
                 });
             }
         }
@@ -64,11 +74,13 @@ var subjects = (function () {
         var subjectInputId = $("#subjectInputId").val();
         var subjectInputNombre = $("#subjectInputName").val();
         var subjectInputDescription = $("#subjectInputDescription").val();
-        var subjectInputProgram = $("#subjectInputProgram").val();
+        var subjectInputProgram = $("#subjectInputProgram")[0].value;
+        var subjectInputCredits = $("#subjectInputCredits")[0].value;        
         var subject = {id: subjectInputId,
             nombre: subjectInputNombre,
             description:subjectInputDescription,
-            program:subjectInputProgram
+            program:subjectInputProgram,
+            credits:subjectInputCredits
         };
         apiclient.addSubject(subject).then(function(data, textStatus, request) {
             alert("Materia añadida exitosamente");
@@ -81,18 +93,50 @@ var subjects = (function () {
         var groupInputProfessor = $("#groupInputProfessor").val();
         var groupInputCapacity = $("#groupInputCapacity").val();
         var groupInputHInicio = $("#groupInputHInicio").val();
-        var groupInputHFin = $("#groupInputHFin").val();
+        var groupInputHFin = $("#groupInputHFin").val();        
+        var groupsInputDias = $("#groupInputDias");
+        var opcional = groupsInputDias[0];        
+        var listaDias = [];        
 
-        var group = {
+        const lunes = $("#lunes")[0];                
+        const martes = $("#martes")[0];        
+        const miercoles = $("#miercoles")[0];
+        const jueves = $("#jueves")[0];
+        const viernes = $("#viernes")[0];
+        const sabado = $("#sabado")[0];
+
+        listaDias.push(lunes);
+        listaDias.push(martes);
+        listaDias.push(miercoles);
+        listaDias.push(jueves);
+        listaDias.push(viernes);
+        listaDias.push(sabado);
+        //console.log("Lista dias: ",listaDias);
+        var diasCurso = [];
+        listaDias.forEach(dia => {
+            const checked =  dia.checked;
+            if(checked) diasCurso.push(dia.value);
+        });
+        console.log("Dias de curso: ",diasCurso);
+
+ 
+        
+        //console.log("groupsInputDias: ",groupsInputDias);
+
+        var group = {            
             room: groupInputRoom,
             professor:groupInputProfessor,
             capacity:groupInputCapacity,
             hourOfInit:groupInputHInicio,
-            hourOfEnd:groupInputHFin
+            hourOfEnd:groupInputHFin,
+            dias:diasCurso        
         };
+        console.log("GROUP: ",group);
+        
         apiclient.addGroup(group,subjectInputGroupId).then(function(data, textStatus, request) {
             alert("Grupo añadido exitosamente");
         });
+        
     }
 
 
