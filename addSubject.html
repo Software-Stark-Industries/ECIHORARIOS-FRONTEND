@@ -1,12 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:c="http://java.sun.com/jsp/jstl/core">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:p="http://primefaces.org/ui" xmlns:f="http://java.sun.com/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core">
+
 <head>
-    <script
-            src="https://code.jquery.com/jquery-3.5.1.js"
-            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -25,207 +21,241 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 </head>
+
 <body id="page-top">
-<!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="./index.html">ECI-Horarios</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger"  onclick="login.redirectToLogin()">LOGIN</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger"  onclick="login.logout()">LOGOUT</a></li>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="./index.html">ECI-Horarios</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick="login.redirectToLogin()">LOGIN</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" onclick="login.logout()">LOGOUT</a></li>
 
-            </ul>
-        </div>
-    </div>
-</nav>
-<!-- Masthead-->
-<header class="masthead">
-    <div class="container h-100">
-        <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-10 align-self-end">
-                <h1 class="text-uppercase text-white font-weight-bold">Agrega Materias y Grupos</h1>
-                <hr class="divider my-4" />
-            </div>
-            <div class="col-lg-8 align-self-baseline">
-                <p class="text-white-75 font-weight-light mb-5" align="left">
-                    En este lugar como administrador podrá agregar las materias que desee.
-                    Para ello llene los formularios que encontrará abajo.
-                    Bienvenido!
-                </p>
+                </ul>
             </div>
         </div>
-    </div>
-</header>
-
-<!-- Search Subject-->
-<section class="page-section" id="searchSubject">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="mt-0">Agregar materia</h2>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-10 align-self-end">
+                    <h1 class="text-uppercase text-white font-weight-bold">Agrega Materias y Grupos</h1>
+                    <hr class="divider my-4" />
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-white-75 font-weight-light mb-5" align="left">
+                        En este lugar como administrador podrá agregar las materias que desee. Para ello llene los formularios que encontrará abajo. Bienvenido!
+                    </p>
+                </div>
             </div>
-            <br><br/>
-            <br><br/>
-            <div class="col-lg-8 text-center">
-                <label for="subjectInputId">Ingresa el id de la materia</label>
-            </div>
-            <div class="col-lg-8 text-center">
-            <input type="text" id="subjectInputId" name="subject" required
-                   minlength="4" maxlength="200" size="10">
-            </div>
-
-            <br><br/>
-            <div class="col-lg-8 text-center">
-                <label for="subjectInputName">Ingresa el nombre de la materia</label>
-            </div>
-            <div class="col-lg-8 text-center">
-
-            <input type="text" id="subjectInputName" name="subject" required
-                   minlength="4" maxlength="200" size="30">
-            </div>
-
-            <br><br/>
-            <div class="col-lg-8 text-center">
-                <label for="subjectInputDescription">Ingresa la descripcion de la materia</label>
-            </div>
-            <div class="col-lg-8 text-center">
-
-            <input type="text" id="subjectInputDescription" name="subject" required
-                   minlength="4" maxlength="200" size="50">
-            </div>
-
-            <br><br/>
-            <div class="col-lg-8 text-center">
-                <label for="subjectInputProgram">Ingresa el programa de la materia</label>
-            </div>
-            <div class="col-lg-8 text-center">
-            <input type="text" id="subjectInputProgram" name="subject" required
-                   minlength="4" maxlength="200" size="30">
-            </div>
-            <div class="col-lg-8 text-center">
-                <button id ="addSubject" type="button"  onclick="subjects.addSubject()" class="btn btn-primary" style="margin-top: 5%;">Agregar</button>
-            </div>
-
         </div>
+    </header>
+
+    <!-- Search Subject-->
+    <section class="page-section" id="searchSubject">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mt-0">Agregar materia</h2>
+                </div>
+                <br><br/>
+                <br><br/>
+                <div class="col-lg-8 text-center">
+                    <label for="subjectInputId">Ingresa el id de la materia</label>
+                </div>
+                <div class="col-lg-8 text-center">
+                    <input type="text" id="subjectInputId" name="subject" required minlength="4" maxlength="200" size="10">
+                </div>
+
+                <br><br/>
+                <div class="col-lg-8 text-center">
+                    <label for="subjectInputName">Ingresa el nombre de la materia</label>
+                </div>
+                <div class="col-lg-8 text-center">
+
+                    <input type="text" id="subjectInputName" name="subject" required minlength="4" maxlength="200" size="30">
+                </div>
+
+                <br><br/>
+                <div class="col-lg-8 text-center">
+                    <label for="subjectInputDescription">Ingresa la descripcion de la materia</label>
+                </div>
+                <div class="col-lg-8 text-center">
+
+                    <input type="text" id="subjectInputDescription" name="subject" required minlength="4" maxlength="200" size="50">
+                </div>
+
+                <br><br/>
+                <div class="col-lg-8 text-center">
+                    <label for="subjectInputCredits">Ingresa la cantidad de creditos</label>
+                </div>
+                <div class="col-lg-8 text-center">
+                    <select id="subjectInputCredits">                        
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>                                                
+                    </select>
+                </div>
+
+                <br><br/>
+                <div class="col-lg-8 text-center">
+                    <label for="subjectInputProgram">Ingresa el programa de la materia</label>
+                </div>
+                <div name="subject" class="col-lg-8 text-center">
+                    <select id="subjectInputProgram">
+                        <option>Administración</option>
+                        <option>Dpto. Matematicas</option>
+                        <option>Dpto. Humanidades</option>
+                        <option>Dpto. Ciencias</option>
+                        <option>Economía</option>
+                        <option>Ingeniería Ambiental</option>
+                        <option>Ingeniería Biomedica</option>
+                        <option>Ingeniería Civil</option>
+                        <option>Ingeniería Electronica</option>
+                        <option>Ingeniería Industrial</option>
+                        <option>Ingeniería Mecanica</option>
+                        <option>Ingeniería de Sistemas</option>                        
+                        <option>Matematicas</option>
+                    </select>
+                    <!--<input type="text" id="subjectInputProgram" name="subject" required minlength="4" maxlength="200" size="30">-->
+                </div>
+                <div class="col-lg-8 text-center">
+                    <button id="addSubject" type="button" onclick="subjects.addSubject()" class="btn btn-primary" style="margin-top: 5%;">Agregar</button>
+                </div>
+
+            </div>
             <div class="row">
             </div>
         </div>
-</section>
+    </section>
 
-<!-- Search Subject-->
-<section class="page-section" id="searchSubject">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="mt-0">Agregar grupo a materia</h2>
-            </div>
-            <br><br/>
-            <br><br/>
-            <div class="col-lg-8 text-center">
-                <label for="subjectInputId">Ingresa el id de la materia</label>
-            </div>
-            <div class="col-lg-8 text-center">
-                <input type="text" id="subjectInputGroupId" name="subject" required
-                       minlength="4" maxlength="200" size="10">
-            </div>
+    <!-- Search Subject-->
+    <section class="page-section" id="searchSubject">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mt-0">Agregar grupo a materia</h2>
+                </div>
+                <br><br/>
+                <br><br/>
+                <div class="col-lg-8 text-center">
+                    <label for="subjectInputId">Ingresa el id de la materia</label>
+                </div>
+                <div class="col-lg-8 text-center">
+                    <input type="text" id="subjectInputGroupId" name="subject" required minlength="4" maxlength="200" size="10">
+                </div>
 
-            <br><br/>
-            <div class="col-lg-8 text-center">
-                <label for="subjectInputName">Ingresa el salon del grupo</label>
-            </div>
-            <div class="col-lg-8 text-center">
+                <br><br/>
+                <div class="col-lg-8 text-center">
+                    <label for="subjectInputName">Ingresa el salon del grupo</label>
+                </div>
+                <div class="col-lg-8 text-center">
 
-                <input type="text" id="groupInputRoom" name="subject" required
-                       minlength="4" maxlength="200" size="30">
-            </div>
+                    <input type="text" id="groupInputRoom" name="subject" required minlength="4" maxlength="200" size="30">
+                </div>
 
-            <br><br/>
-            <div class="col-lg-8 text-center">
-                <label for="subjectInputDescription">Ingresa el nombre del profesor del grupo</label>
-            </div>
-            <div class="col-lg-8 text-center">
+                <br><br/>
+                <div class="col-lg-8 text-center">
+                    <label for="subjectInputDescription">Ingresa el nombre del profesor del grupo</label>
+                </div>
+                <div class="col-lg-8 text-center">
 
-                <input type="text" id="groupInputProfessor" name="subject" required
-                       minlength="4" maxlength="200" size="50">
-            </div>
+                    <input type="text" id="groupInputProfessor" name="subject" required minlength="4" maxlength="200" size="50">
+                </div>
 
-            <br><br/>
-            <div class="col-lg-8 text-center">
-                <label for="subjectInputProgram">Ingresa el numero de cupos</label>
-            </div>
-            <div class="col-lg-8 text-center">
-                <input type="text" id="groupInputCapacity" name="subject" required
-                       minlength="4" maxlength="200" size="30">
-            </div>
-            <br><br/>
-            <div class="col-lg-8 text-center">
-                <label for="subjectInputProgram">Ingresa la hora de inicio de la clase (Ej:  15:30) </label>
-            </div>
-            <div class="col-lg-8 text-center">
-                <input type="text" id="groupInputHInicio" name="subject" required
-                       minlength="4" maxlength="200" size="30">
-            </div>
-            <br><br/>
-            <div class="col-lg-8 text-center">
-                <label for="subjectInputProgram">Ingresa la hora de fin de la clase (Ej:  15:30) </label>
-            </div>
-            <div class="col-lg-8 text-center">
-                <input type="text" id="groupInputHFin" name="subject" required
-                       minlength="4" maxlength="200" size="30">
-            </div>
-            <br><br/>
-            <div class="col-lg-8 text-center">
-                <button id ="addGroup" type="button"  onclick="subjects.addGroup()" class="btn btn-primary" style="margin-top: 5%;">Agregar</button>
-            </div>
+                <br><br/>
+                <div class="col-lg-8 text-center">
+                    <label for="subjectInputProgram">Ingresa el numero de cupos</label>
+                </div>
+                <div class="col-lg-8 text-center">
+                    <input type="text" id="groupInputCapacity" name="subject" required minlength="4" maxlength="200" size="30">
+                </div>
+                <br><br/>
+                <div class="col-lg-8 text-center">
+                    <label for="subjectInputProgram">Ingresa la hora de inicio de la clase (Ej:  15:30) </label>
+                </div>
+                <div class="col-lg-8 text-center">
+                    <input type="text" id="groupInputHInicio" name="subject" required minlength="4" maxlength="200" size="30">
+                </div>
+                <br><br/>
+                <div class="col-lg-8 text-center">
+                    <label for="subjectInputProgram">Ingresa la hora de fin de la clase (Ej:  15:30) </label>
+                </div>
+                <div class="col-lg-8 text-center">
+                    <input type="text" id="groupInputHFin" name="subject" required minlength="4" maxlength="200" size="30">
+                </div>
+                <div class="col-lg-8 text-center">
+                    <div id="groupInputDias">
 
-        </div>
-        <div class="row">
-        </div>
-    </div>
-</section>
+                        <input type="checkbox" id="lunes" name="subject" value="lunes">Lunes
+                        <input type="checkbox" id="martes" name="subject" value="martes" checked>Martes
+                        <input type="checkbox" id="miercoles" name="subject" value="miercoles">Miercoles
 
-<!-- Contact-->
-<section class="page-section" id="contact">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="mt-0">Contactanos</h2>
-                <hr class="divider my-4" />
-                <p class="text-muted mb-5">Escuela Colombiana de Ingeniería Julio Garavito</p>
-                <p class="text-muted mb-5">AK.45 No.205-59 (Autopista Norte)-Bogotá</p>
-                <p class="text-muted mb-5">Fabián Ramirez Pinto</p>
+                        <br>
+
+                        <input type="checkbox" id="jueves" name="subject" value="jueves">Jueves
+                        <input type="checkbox" id="viernes" name="subject" value="viernes">Viernes
+                        <input type="checkbox" id="sabado" name="subject" value="sabado">Sabado
+                    </div>
+                </div>
+                <br><br/>
+                <div class="col-lg-8 text-center">
+                    <button id="addGroup" type="button" onclick="subjects.addGroup()" class="btn btn-primary" style="margin-top: 5%;">Agregar</button>
+                </div>
+
+            </div>
+            <div class="row">
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                <div> +57 3116505170</div>
+    </section>
+
+    <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mt-0">Contactanos</h2>
+                    <hr class="divider my-4" />
+                    <p class="text-muted mb-5">Escuela Colombiana de Ingeniería Julio Garavito</p>
+                    <p class="text-muted mb-5">AK.45 No.205-59 (Autopista Norte)-Bogotá</p>
+                    <p class="text-muted mb-5">Fabián Ramirez Pinto</p>
+                </div>
             </div>
-            <div class="col-lg-4 mr-auto text-center">
-                <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
-                <a class="d-block" href="mailto:labinfo@escuelaing.edu.co">fabian.ramirez-p@mail.escuelaing.edu.co
+            <div class="row">
+                <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                    <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
+                    <div> +57 3116505170</div>
+                </div>
+                <div class="col-lg-4 mr-auto text-center">
+                    <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                    <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
+                    <a class="d-block" href="mailto:labinfo@escuelaing.edu.co">fabian.ramirez-p@mail.escuelaing.edu.co
                 </a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Footer-->
-<footer class="bg-light py-5">
-    <div class="container"><div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div></div>
-</footer>
-<!-- Bootstrap core JS-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-<!-- Third party plugin JS-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-<!-- Core theme JS-->
-<script src="js/login.js"></script>
-<script src="js/apiclient.js"></script>
-<script src="js/subjects.js"></script>
+    </section>
+    <!-- Footer-->
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/login.js"></script>
+    <script src="js/apiclient.js"></script>
+    <script src="js/subjects.js"></script>
 
 </body>
+
 </html>

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Historial De Equipos</title>
+    <title>Preinscripcion</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
@@ -20,6 +20,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/preinscripcion_estudiante.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -58,84 +59,82 @@
     <!-- Search Subject-->
     <section class="page-section" id="searchSubject">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="d-flex justify-content-between">
+                <!--
+                <div class="col-lg-8 text-center">
+
+                </div>-->
+
+
+                <div class="text-center">
+
+                    <table class="table table-bordered" id="table_subject">
+
+                        <thead class="thead-dark" id="table_header">
+                            <tr>
+                                <th scope="col">Materia</th>
+                                <th scope="col">Creditos</th>
+                                <th scope="col">Seleccionar</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="table_body">
+                            <tr>
+                                <th>PIMO</th>
+                                <th>4</th>
+                                <th><button class="btn btn-success">Preinscribir</button></th>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                </div>
                 <div class="col-lg-8 text-center">
                     <h2 class="mt-0">Consulta la materia</h2>
-                </div>
-                <br><br/>
-                <br><br/>
-                <div class="col-lg-8 text-center">
                     <label for="subject">Ingresa el id de la materia</label>
                     <input type="text" id="subject" name="subject" required minlength="4" maxlength="8" size="10">
                     <div class="text-center">
-                        <button id="searchGroups" type="button" onclick="subjects.getSubject()" class="btn btn-primary" style="margin-top: 5%;">Connect </button>
+                        <button id="searchGroups" type="button" onclick="subjects.getSubject()" class="btn btn-primary" style="margin-top: 5%;">Buscar</button>
                     </div>
                     <br><br/>
-                    <div class="text-center">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>MATERIAS INSCRITAS</strong>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-bordered" id="table_enrolled">
 
-                        <table class="table table-bordered" id="table_subject">
+                                <thead class="thead-dark" id="table_header">
+                                    <tr>
+                                        <th scope="col">Materia</th>
+                                        <th scope="col">Creditos</th>
+                                        <th scope="col">Acción</th>
+                                    </tr>
+                                </thead>
 
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th scope="col">Grupo</th>
-                                    <th scope="col">Salon</th>
-                                    <th scope="col">Profesor</th>
-                                    <th scope="col">Capacidad</th>
-                                    <th scope="col">Hora de inicio</th>
-                                    <th scope="col">Hora de fin</th>
-                                    <th scope="col">Día</th>
-                                </tr>
-
-                            </thead>
-
-                            <tbody id="table_body">
-
-                            </tbody>
-
-                        </table>
-
+                                <tbody id="table_body">
+                                    <tr>
+                                        <th>PIMO</th>
+                                        <th>4</th>
+                                        <th><button class="btn btn-danger">Eliminar</button></th>
+                                    </tr>
+                                </tbody>
+                        </div>
+                        <div class="card-header">Creditos restantes: 10</div>
                     </div>
 
+                </div>
 
-                </div>
-                <div class="row">
-                </div>
+
             </div>
+            <!--<div class="row"></div>-->
         </div>
+
     </section>
 
-    <!-- Contact-->
-    <section class="page-section" id="contact">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="mt-0">Contactanos</h2>
-                    <hr class="divider my-4" />
-                    <p class="text-muted mb-5">Escuela Colombiana de Ingeniería Julio Garavito</p>
-                    <p class="text-muted mb-5">AK.45 No.205-59 (Autopista Norte)-Bogotá</p>
-                    <p class="text-muted mb-5">Fabián Ramirez Pinto</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                    <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-                    <div> +57 3116505170</div>
-                </div>
-                <div class="col-lg-4 mr-auto text-center">
-                    <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                    <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
-                    <a class="d-block" href="mailto:labinfo@escuelaing.edu.co">fabian.ramirez-p@mail.escuelaing.edu.co
-                </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer-->
-    <footer class="bg-light py-5">
-        <div class="container">
-            <div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div>
-        </div>
-    </footer>
+
+
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
@@ -145,7 +144,7 @@
     <!-- Core theme JS-->
     <script src="js/login.js"></script>
     <script src="js/apiclient.js"></script>
-    <script src="js/subjects.js"></script>
+    <script src="js/preinscripcion_estudiante.js"></script>
 
 </body>
 
