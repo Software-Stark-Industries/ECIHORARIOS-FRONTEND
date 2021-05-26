@@ -180,7 +180,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
     * Realizar una Inscripción de materias.
     
 
-    ![Funciones estudiante](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/fun%20principal%20estudian.png)
+    ![Funciones estudiante](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/menu%20principal%20estudiante.png)
 
 * El administrador de la ECI podra:
 
