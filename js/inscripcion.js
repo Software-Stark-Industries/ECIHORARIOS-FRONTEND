@@ -216,8 +216,7 @@ var inscription = (function () {
                 delete materia.subject;
             });            
             console.log("SIN SUBJECT: ",preinscription);
-            //apiclient.makeInscription(preinscription);
-            
+            //apiclient.makeInscription(preinscription);            
         }
   
         function updateSubject(grupo){
