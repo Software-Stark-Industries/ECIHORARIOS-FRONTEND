@@ -14,7 +14,9 @@ var apiclient = (function () {
         "Authorization": 'Bearer ' + localStorage.getItem('token'),
         */
         var data = $.ajax({
-            url: "https://eci-horarios-backend.herokuapp.com/login/",
+            //url: "https://eci-horarios-backend.herokuapp.com/login/",
+            url: "https://backendservicioseci.herokuapp.com/login/",
+            
             //url: "http://localhost:8080/login/",            
             type: "POST",
             data: JSON.stringify(loginRequest),
@@ -34,7 +36,8 @@ var apiclient = (function () {
     function postRegister(registerRequest){
         console.log("REGISTER REQUEST: ",registerRequest);        
         var data = $.ajax({
-            url: "https://eci-horarios-backend.herokuapp.com/login/register",
+            //url: "https://eci-horarios-backend.herokuapp.com/login/register",
+            url: "https://backendservicioseci.herokuapp.com/login/register",            
             //url: "http://localhost:8080/login/register",            
             type: "POST",
             data: JSON.stringify(registerRequest),
@@ -69,7 +72,7 @@ var apiclient = (function () {
 
     function addSubject(subject){
         var data = $.ajax({
-            url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects",
+            url: "https://backendservicioseci.herokuapp.com/api/v1/subjects",            
             //url: "http://localhost:8080/api/v1/subjects",
             type: "POST",
             data: JSON.stringify(subject),
@@ -90,7 +93,8 @@ var apiclient = (function () {
         console.log("\n A punto de mandar a back: ",subjectsEnrolled);
         
         var data = $.ajax({
-            url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects/preinscription/"+localStorage.getItem('email'),
+            //url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects/preinscription/"+localStorage.getItem('email'),
+            url: "https://backendservicioseci.herokuapp.com/api/v1/subjects/preinscription/"+localStorage.getItem('email'),            
             //url: "http://localhost:8080/api/v1/subjects/preinscription/"+localStorage.getItem('email'),
             type: "POST",
             data: JSON.stringify(subjectsEnrolled),
@@ -143,7 +147,8 @@ var apiclient = (function () {
         materiasPreinscritas = subjectsEnrolled;        
         
         var data = $.ajax({
-            url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects/inscription/"+localStorage.getItem('email'),
+            //url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects/inscription/"+localStorage.getItem('email'),
+            url: "https://backendservicioseci.herokuapp.com//api/v1/subjects/inscription/"+localStorage.getItem('email'),            
             //url: "http://localhost:8080/api/v1/subjects/inscription/"+localStorage.getItem('email'),
             type: "POST",
             data: JSON.stringify(subjectsEnrolled),
@@ -168,7 +173,8 @@ var apiclient = (function () {
     function addGroup(group,subjectId){
         console.log("En apiclient: ",group);
         var data = $.ajax({
-            url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects/"+subjectId,
+            //url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects/"+subjectId,
+            url: "https://backendservicioseci.herokuapp.com/api/v1/subjects/"+subjectId,            
             //url: "http://localhost:8080/api/v1/subjects/"+subjectId,
             type: "POST",
             data: JSON.stringify(group),
@@ -188,7 +194,8 @@ var apiclient = (function () {
     function getSubject(idSubject,callback){
         console.log("Entrando en getSubject!: ",idSubject);
         var data = $.ajax({
-            url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects/"+idSubject,
+            //url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects/"+idSubject,
+            url: "https://backendservicioseci.herokuapp.com/api/v1/subjects/"+idSubject,          
             //url: "http://localhost:8080/api/v1/subjects/"+idSubject,
             type: "GET",
             success : function (data, text) {
@@ -210,7 +217,8 @@ var apiclient = (function () {
         console.log("Entrando en getUSER!: ",idUser);
         var data = $.ajax({
             //url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects/"+idSubject,
-            url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects/preinscription/"+idUser,            
+            //url: "https://eci-horarios-backend.herokuapp.com/api/v1/subjects/preinscription/"+idUser,            
+            url: "https://backendservicioseci.herokuapp.com/api/v1/subjects/preinscription/"+idUser,                        
             //url: "http://localhost:8080/api/v1/subjects/preinscription/"+idUser,
             type: "GET",
             success : function (data, text) {

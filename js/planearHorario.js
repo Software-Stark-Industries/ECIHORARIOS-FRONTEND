@@ -18,6 +18,8 @@ var plans = (function () {
         showSubjectsPre(subjectsPre);
     };
 
+    let eliminarBoton=false;
+
     function showSubjectsPre(subjectsPre){
         //console.log("VA A MANTENER: ",subjectsPre);
         $("#subjects_section").empty();   
@@ -159,29 +161,23 @@ var plans = (function () {
                             "<td>" + g.dias[i] + "</td>"+                            
                             "<td>" + "</td>"+
                             "</tr>"
-                        );
-                        //console.log("NOMBRE GRUPO: ",subject);                        
+                        );                        
                         var preinscribirButton = document.createElement("input");
-                        preinscribirButton.type = "button";
-                        //preinscribirButton.value = "preinscribir";
+                        preinscribirButton.type = "button";                        
                         preinscribirButton.value = "preinscribir";
                         preinscribirButton.name = g.grupo;
                         preinscribirButton.id = "preinscribir"+contador;
                         preinscribirButton.className ="btn btn-success";
-                        preinscribirButton.addEventListener('click', e => {  
-                            //console.log("\n ENTRA EN SELECCIONAR GRUPO BOTON: ",e);
+                        preinscribirButton.addEventListener('click', e => {                              
                             updateSubject(subject, e.target.name);
                         });                
 
-                        //console.log("CONTADOR: ",contador);
+                        
                         let size = document.getElementsByTagName("tbody")[0].childNodes[contador].childNodes.length;
-                        let buttons = document.getElementsByTagName("tbody")[0].childNodes[contador].childNodes[size-1].children.length;                    
-                        //console.log("BUTTONS: ",buttons);
-                        //console.log("LLEGANDO: ",document.getElementsByTagName("tbody")[0].childNodes[contador]);
+                        let buttons = document.getElementsByTagName("tbody")[0].childNodes[contador].childNodes[size-1].children.length;                                            
                         if(band && buttons<1){                                                                                
                             document.getElementsByTagName("tbody")[0].childNodes[contador].childNodes[size-1].appendChild(preinscribirButton);                                                    
-                            band=false;
-                            //botonesEliminar.push(preinscribirButton);
+                            band=false;                            
                         }  
                         contador++;    
                     }
@@ -191,28 +187,21 @@ var plans = (function () {
             }           
         }
 
-        function savePlan(){
-            console.log("ENTRANDO EN SAVEPLAN: ");
+        function savePlan(){            
             console.log("MATERIAS QUE VA A GUARDAR: ",materiasOpcion);
             apiclient.savePlan(materiasOpcion);            
             localStorage.setItem('planPreinscripcion',JSON.stringify(materiasOpcion));
             alert("Plan de horario guardado con éxito.");
             window.location.href='mis_planes.html';
-            //apiclient.savePlan(materiasOpcion);
+            
         };
 
-        /*
-        SIGUE GUARDAR LAS MATERIAS QUE SE SELECCIONAN EN UNA LISTA Y VALIDAR QUE NO SE CRUCEN
-        CON ESO CUANDO SE GUARDEN LAS OPCIONES SE GUARDAN LAS MATERIAS SELECCIONADAS Y LISTO        
-
-
-        PONER LAS MATERIAS QUE YA SE TIENEN PREINSCRITAS EN LA SONA DE PREINSCRIPCION
-         */
+        
 
         function updateSubject(subject, grupo){
             console.log("UPDATING SUBJECT: ",subject," grupo: ",grupo);
             let tablePlan = $("#table_plan > tbody")[0];
-            //console.log("\n tablePlan: ",tablePlan);
+        
             var listGroups = _map(subject.groups);
             
             const semana = {'lunes':1,'martes':2,'miercoles':3,'jueves':4,'viernes':5,'sabado':6};
@@ -224,29 +213,31 @@ var plans = (function () {
                     if(materiasOpcion.length<1){
                         materiasOpcion.push(group);                        
                         alert(`Se preinscribió el grupo: ${group.subject} - ${group.grupo}`);
+                        eliminarBoton = true;
+                        var eliminarMateria = document.createElement("input");
+                        eliminarMateria.type = "button";                        
+                        eliminarMateria.value = "preinscribir";
+                        eliminarMateria.name = g.grupo;
+                        eliminarMateria.id = "preinscribir"+contador;
+                        eliminarMateria.className ="btn btn-success";
+                        eliminarMateria.addEventListener('click', e => {                              
+                            updateSubject(subject, e.target.name);
+                        });   
                         showPreSubject(subject,group,semana);                        
                     }else{
                         let ocupado = false;                        
-                        materiasOpcion.forEach(curso => {
-                            //console.log("\n CURSO PREINSCRITO: ",curso);
-                            //Comparamos que no este inscribiendo una materia que ya preinscribio
-                            if(curso.subject === group.subject){
-                                //console.log("YA TIENES INSCRITA ESTA MATERIA WASHON\n ");
+                        materiasOpcion.forEach(curso => {                            
+                            if(curso.subject === group.subject){                                
                                 ocupado=true;
-                                alert(`YA ASIGNASTE LA MATERIA ${group.subject} EN TU HORARIO`);
-                                
-                            }else{
-                                //console.log("SON MATERIAS DIFERENTES ASÍ QUE OK \n");
-                                //console.log("curso.hInicio: ",curso.hInicio, " group.hInicio: ",group.hInicio);
+                                alert(`YA ASIGNASTE LA MATERIA ${group.subject} EN TU HORARIO`);                                
+                            }else{                                
                                 if(curso.hInicio === group.hInicio){
                                     alert(`${curso.subject}-${curso.grupo} SE CRUZA CON ${group.subject}-${group.grupo}`);
-                                    ocupado=true;
-                                    //console.log("LAS HORAS SON IGUALES HAY CRUCE DE MATERIAS");
+                                    ocupado=true;                                    
                                 }                                                                
                             }
                         });
-                        if(!ocupado){
-                            //console.log("LAS HORAS SON DIFERENTES VA A GUARDAR: ");
+                        if(!ocupado){                            
                             materiasOpcion.push(group);
                             console.log("GRUPOS PREINSCRITOS: ",materiasOpcion);                                                                           
                             alert(`Se preinscribió el grupo: ${group.subject} - ${group.grupo}`);
