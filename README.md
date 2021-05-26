@@ -120,7 +120,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
   ### 5. **Pre-Inscripción Materias**
   
   - Como vemos nos va a mostrar que estamos en la sección de preinscripción de horarios, la cual será buscada por el ID, preinscribiéndolas de manera correcta.
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/preinscripcion.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/inscripcion%20materia.png)
   
   - En cada una de ellas podremos ver las opciones de plan de horario que hemos creado anteriormente.
   ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/pre%20y%20inscrip.png)
