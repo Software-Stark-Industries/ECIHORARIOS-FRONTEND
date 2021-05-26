@@ -77,7 +77,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
 
   ### 1. **Acceso al sitio web**
   - Ingrese al navegador de preferencia y escriba en la barra de direcciones el siguiente URL de acceso:
-      https://eci-horarios-frontend-fr.herokuapp.com/index.html 
+      https://frontendservicioseci.herokuapp.com/index.html
   
   ### 2.	**Inicio de Sesión**
   - Para el inicio de sesión, en la pagina principal debemos irnos a la esquina superior derecha, en donde encontraremos un botón LOGIN. 
