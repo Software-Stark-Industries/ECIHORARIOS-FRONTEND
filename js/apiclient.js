@@ -14,7 +14,7 @@ var apiclient = (function () {
         "Authorization": 'Bearer ' + localStorage.getItem('token'),
         */
         var data = $.ajax({
-            url: "https://eci-horarios-backend.herokuapp.com/login",
+            url: "https://eci-horarios-backend.herokuapp.com/login/",
             //url: "http://localhost:8080/login/",            
             type: "POST",
             data: JSON.stringify(loginRequest),
