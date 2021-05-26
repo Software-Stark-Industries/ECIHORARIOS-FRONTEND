@@ -166,7 +166,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
 
 - • En donde se podrá visualizar de la siguiente forma:
 
- ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/agregar%20materia.png)
+ ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/agregar%20grupo%20materia.png)
 ## Funcionalidades mas Importantes
 
 * Se contara con dos usuarios, los cuales contaran con un servicio para el manejo de los servicios, como lo podemos ver aca:
