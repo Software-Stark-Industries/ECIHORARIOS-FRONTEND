@@ -38,7 +38,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
 
 
 # Despliegue en HerokuApp
-[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://eci-horarios-frontend-fr.herokuapp.com/index.html)
+[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://frontendservicioseci.herokuapp.com/index.html)
 
 ## Integración Continua con CircleCI
 
@@ -87,6 +87,9 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
   - Al dar clic en el botón, nos redirigirá al menú de acceso, en donde nos solicitara en los espacios en blanco un Correo y una contraseña, al ingresar dichos datos procedemos a darle INGRESAR.
   
   ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/LOGIN%20PRINCIPAL.png)
+  - Si somos usuarios de estudiante, nos permitira tener una opción de registrarnos, con nuestro nombre, correo y una contraseña.
+  
+   ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/registro%20usuario.png)
   
   - •	Existen dos tipos de usuario llamados:
         - Administrador
@@ -99,9 +102,11 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
   - •	Al presionar al ingresar al menú de administrador podremos acceder a estas diferentes opciones:
   1. Consultar Materias Disponibles.
   2. Añadir Materias y Grupo Administración
+  3. Preinscripción.
+  4. Inscripción.
 
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/menu%20principal%20admin.png)
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/servicios%20eci%20horarios.png)
 
   ### 4. **Menú de Estudiante**
   
@@ -114,27 +119,35 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
   
   ### 5. **Pre-Inscripción Materias**
   
-  - •	En cada una de ellas podremos ver las opciones de plan de horario que hemos creado anteriormente.
-  
-  
+  - Como vemos nos va a mostrar que estamos en la sección de preinscripción de horarios, la cual será buscada por el ID, preinscribiéndolas de manera correcta.
   ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/preinscripcion.png)
+  
+  - En cada una de ellas podremos ver las opciones de plan de horario que hemos creado anteriormente.
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/pre%20y%20inscrip.png)
   
   ### 6. **inscripción de Materias**
   
-  - •	Al presionar el botón de INSCRIPCION, podremos visualizar nuestras opciones de horarios que hemos creado anteriormente e indicarnos cual se nos acomoda más. 
+  - Tendremos un menú en donde nos indicara que nos encontramos en la opción de inscripción, en donde podremos ver la siguiente imagen:
+   ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/menu%20preinscripcion.png)
+   
+  - Al presionar el botón de INSCRIPCION, podremos visualizar nuestras opciones de horarios que hemos creado anteriormente e indicarnos cual se nos acomoda más. 
   
   ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/inscripcion.png)
   
+  - Luego, podremos ver como la materia que tenemos, la podemos inscribir y la vemos en nuestro horario.
+   ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/plan%20de%20horario%20inscrito.png)
   
   ### 7. **Añadir Materias y Grupos Administración**
   
   - •	AL presionar el botón de añadir Materias y Grupos Administración podremos agregar materias que vayamos a cursar en el periodo académico.
+  ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/menu%20agregar%20materias.png)
   - •	En ella encontraremos cuatro tipos de opciones:
   
   1. Ingrese el Id de la materia.
   2. Ingrese el nombre de la materia.
   3. Ingrese la descripción de la materia.
-  4. Ingrese el programa de la materia.
+  4. Ingrese la cantidad de créditos.
+  5. Ingrese el programa de la materia.
   
   - • En donde se podrá visualizar de la siguiente forma:
   
@@ -153,7 +166,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
 
 - • En donde se podrá visualizar de la siguiente forma:
 
- ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/agregar%20grupo%20materia.png)
+ ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Manual%20de%20Usuario/agregar%20materia.png)
 ## Funcionalidades mas Importantes
 
 * Se contara con dos usuarios, los cuales contaran con un servicio para el manejo de los servicios, como lo podemos ver aca:
