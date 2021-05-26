@@ -57,7 +57,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
 
 ### Diagrama de Casos de Uso
 [Presione Aqui para revisar El Diagrama De Entidad Relación](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/tree/main/design/CasosDeUso)
-![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Diagramas/Funciones.png)
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Diagramas/Funciones1.png)
 
 ### Diagrama de Despliegue
 [Presione Aqui para revisar El Diagrama De Despliegue](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/tree/main/design/Diagrama%20de%20Despliegue)
