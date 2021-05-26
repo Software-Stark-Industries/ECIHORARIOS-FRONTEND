@@ -41,8 +41,7 @@ var subjects = (function () {
 
         function _map(list){
             var mapList = null;
-            return mapList = list.map(function(group){
-                //console.log("GROUP FROM BACK: ",group);
+            return mapList = list.map(function(group){                
                 return {
                     grupo:group.id,
                     salon:group.room,
@@ -66,15 +65,9 @@ var subjects = (function () {
             showSubjects(subjectsEnrolled);
         }
 
-        /*
-        * se debe poner mensajes
-         */
         function showSubjects(subjectsEnrolled){
-            $("#table_enrolled > tbody").empty();                   
-           //console.log("\n En show subjects: ",subjectsEnrolled);   
-           
-            subjectsEnrolled.forEach(materia => {
-                //console.log("MATERIA: ",materia);
+            $("#table_enrolled > tbody").empty();                                         
+            subjectsEnrolled.forEach(materia => {                
                 $("#table_enrolled > tbody").append(
                     "<tr>" +                        
                     "<td>" + materia.id + "</td>"+    
@@ -92,8 +85,7 @@ var subjects = (function () {
                     preinscribirButton.name = "eliminar";
                     preinscribirButton.id = "eliminar"+i;
                     preinscribirButton.className ="btn btn-danger";
-                    preinscribirButton.addEventListener('click', e => {  
-                        //console.log("ENTRA EN ELIMINAR MATERIA BOTON: ",e);
+                    preinscribirButton.addEventListener('click', e => {                          
                         removeSubject(materia);
                     });                
                                                                     
@@ -152,33 +144,7 @@ var subjects = (function () {
             //console.log("SUBJECT FROM BACK: ",listGroups);
             if (listGroups.length===0) {
                 alert("No se encontraron grupos para esa materia");
-            }
-            else{
-//                $("#table_subject > tbody").empty();                
-                /*
-                listGroups.map(function(g){
-                    console.log("ESTE ES EL GROUP DE SUBJECT: "+g);
-                    console.log("Dias: ",g.dias);
-                    let buttons = [];
-                    
-                    for(let i=0;i<g.dias.length;i++){
-                        const preinscribirButton = document.createElement('button');
-                        //preinscribirButton.classList("btn btn-success");
-                        preinscribirButton.setAttribute('id', i);
-                        buttons.push(preinscribirButton);
-                        $("#table_subject > tbody").append(
-                            "<tr>" +                        
-                            "<td>" + g.grupo + "</td>"+    
-                            "<td>" + g.credits + "</td>"+    
-                            "<td>" + preinscribirButton + "</td>"+    
-                            "</tr>"
-                        );
-                    }                                                          
-                                        
-                    console.log("Lista de botones: ", buttons);
-                });
-                */
-            }
+            }            
         }
 
         function getSubject(){
@@ -206,7 +172,8 @@ var subjects = (function () {
         console.log("Guardando preinscripción");
         console.log("Las materias que vamos a guardar son: ",subjectsEnrolled);                
         apiclient.savePreinscription(subjectsEnrolled).then(function(data, textStatus, request) {
-            alert("¡Materias guardadas éxitosamente!");            
+            alert("¡Materias guardadas éxitosamente!");  
+            window.location.href='index.html';
         });
     }
 

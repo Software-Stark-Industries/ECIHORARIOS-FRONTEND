@@ -14,7 +14,7 @@ var login = (function () {
         var user = {email: email, password: passw};
         apiclient.postLogin(user)
             .then(function(data, textStatus, request) {
-                console.log("RETORNO DEL SERVIDOR DE LOGIN: ",data);
+                console.log("RETORNO DEL SERVIDOR DE LOGIN: ",data);                
                 localStorage.setItem("idUser",data.user.id);
                 localStorage.setItem("email",data.user.email);
                 localStorage.setItem("name",data.user.name);
@@ -23,6 +23,7 @@ var login = (function () {
                 localStorage.setItem("isAdmin",data.user.admin);
                 localStorage.setItem('token', JSON.stringify(data.accessToken));                
                 localStorage.setItem('user', JSON.stringify(data.user));
+                alert("Ingreso al sistema con éxito.");
                 window.location.href='index.html';
         });
     }
@@ -36,6 +37,7 @@ var login = (function () {
             .then(function(data, textStatus, request) {
                 console.log("RETORNO DEL SERVIDOR DE REGISTER: ",data);
                 if(data === "USER_CREATED"){
+                    alert("Usuario creado con éxito!");
                     window.location.href='login.html';
                 }else{
                     console.log("no esta registrado.")

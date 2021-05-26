@@ -21,6 +21,18 @@ var subjects = (function () {
         }
     }
 
+    function redirectToAdminRegister(){
+        if(window.localStorage.getItem('isLogged')===null){
+            alert("No estás logueado");
+        }else{
+            if(window.localStorage.getItem('isAdmin')==="false"){
+                alert("Necesitas ser administrador para acceder a esta funcion")
+            } else{
+                window.location.href='registro.html';
+            }
+        }
+    }
+
     function redirectToPreinscription(){
         if(window.localStorage.getItem('isLogged')===null){
             alert("No estás logueado");
@@ -169,6 +181,7 @@ var subjects = (function () {
         addGroup:addGroup,
         getUser:getUser,
         redirectToPreinscription:redirectToPreinscription,
-        redirectToInscription:redirectToInscription
+        redirectToInscription:redirectToInscription,
+        redirectToAdminRegister:redirectToAdminRegister
     };
 })();

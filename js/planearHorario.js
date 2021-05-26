@@ -9,10 +9,8 @@ var plans = (function () {
         }
     }
 
-    window.onload = async function(){
-        //console.log("Mientras carga...");
-        let user = await apiclient.getUser(localStorage.getItem('email'));
-        //console.log("USER EN PRE: ",user);
+    window.onload = async function(){        
+        let user = await apiclient.getUser(localStorage.getItem('email'));        
         let subjectsPre = user.preinscription;
         console.log("Materias preinscritas: ",subjectsPre);
         showSubjectsPre(subjectsPre);
@@ -20,11 +18,9 @@ var plans = (function () {
 
     let eliminarBoton=false;
 
-    function showSubjectsPre(subjectsPre){
-        //console.log("VA A MANTENER: ",subjectsPre);
+    function showSubjectsPre(subjectsPre){        
         $("#subjects_section").empty();   
-        subjectsPre.forEach(materia => {
-            //console.log("\n MATERIA: ",materia.id+" \n ");
+        subjectsPre.forEach(materia => {            
             var opt = document.createElement('option');
             opt.value = materia.id;
             opt.innerHTML = materia.id;                                    
@@ -74,15 +70,13 @@ var plans = (function () {
             creditosPreinscripcion+=subject.credits;
             subjectsEnrolled = materias;
             getPreinscriptionCredits();
-            //console.log("\n MATERIAS ACTUALIZADAS: ",materias, "\n");
+            
             showSubjects();
         }
 
         function showSubjects(){
-            $("#table_enrolled > tbody").empty();                   
-           //console.log("\n En show subjects: ",subjectsEnrolled);           
-            subjectsEnrolled.forEach(materia => {
-                //console.log("MATERIA: ",materia);
+            $("#table_enrolled > tbody").empty();                              
+            subjectsEnrolled.forEach(materia => {                
                 $("#table_enrolled > tbody").append(
                     "<tr>" +                        
                     "<td>" + materia.id + "</td>"+    
@@ -168,7 +162,8 @@ var plans = (function () {
                         preinscribirButton.name = g.grupo;
                         preinscribirButton.id = "preinscribir"+contador;
                         preinscribirButton.className ="btn btn-success";
-                        preinscribirButton.addEventListener('click', e => {                              
+                        preinscribirButton.addEventListener('click', e => {   
+                            console.log("EEEEEE: ",e.target.name);
                             updateSubject(subject, e.target.name);
                         });                
 
@@ -196,34 +191,31 @@ var plans = (function () {
             
         };
 
-        
+        const semana = {'lunes':1,'martes':2,'miercoles':3,'jueves':4,'viernes':5,'sabado':6};
 
-        function updateSubject(subject, grupo){
-            console.log("UPDATING SUBJECT: ",subject," grupo: ",grupo);
-            let tablePlan = $("#table_plan > tbody")[0];
-        
-            var listGroups = _map(subject.groups);
-            
-            const semana = {'lunes':1,'martes':2,'miercoles':3,'jueves':4,'viernes':5,'sabado':6};
-            listGroups.forEach(group => {
-                
+        function updateSubject(subject, grupo){                                
+            var listGroups = _map(subject.groups);                        
+            listGroups.forEach(group => {                
                 group['subject'] = subject.id;
-                if(group.grupo == grupo){
-                    
+                if(group.grupo == grupo){                    
                     if(materiasOpcion.length<1){
                         materiasOpcion.push(group);                        
                         alert(`Se preinscribió el grupo: ${group.subject} - ${group.grupo}`);
-                        eliminarBoton = true;
-                        var eliminarMateria = document.createElement("input");
-                        eliminarMateria.type = "button";                        
-                        eliminarMateria.value = "preinscribir";
-                        eliminarMateria.name = g.grupo;
-                        eliminarMateria.id = "preinscribir"+contador;
-                        eliminarMateria.className ="btn btn-success";
-                        eliminarMateria.addEventListener('click', e => {                              
-                            updateSubject(subject, e.target.name);
-                        });   
-                        showPreSubject(subject,group,semana);                        
+                        addSubjectPre(subject);
+                        if(!eliminarBoton){
+                            eliminarBoton = true;
+                            var eliminarMateria = document.createElement("input");
+                            eliminarMateria.type = "button";                        
+                            eliminarMateria.value = "eliminar";
+                            eliminarMateria.name = "eliminar";
+                            eliminarMateria.id = "deletesubject";
+                            eliminarMateria.className ="btn btn-danger";
+                            eliminarMateria.addEventListener('click', e => {                              
+                                updateSubject(subject, e.target.name);
+                            });                           
+                            $("#eliminar_materia")[0].appendChild(eliminarMateria);                                            
+                        }                        
+                        showPreSubject(subject,group);                        
                     }else{
                         let ocupado = false;                        
                         materiasOpcion.forEach(curso => {                            
@@ -238,27 +230,39 @@ var plans = (function () {
                             }
                         });
                         if(!ocupado){                            
-                            materiasOpcion.push(group);
-                            console.log("GRUPOS PREINSCRITOS: ",materiasOpcion);                                                                           
+                            materiasOpcion.push(group);                            
                             alert(`Se preinscribió el grupo: ${group.subject} - ${group.grupo}`);
-                            showPreSubject(subject,group,semana);                            
+                            addSubjectPre(subject);           
+                            showPreSubject(subject,group);                            
                         }                                                                                                                                
                     }                                                        
                 }
             });            
         }
 
-        function showPreSubject(subject,group,semana){
-            //REVISAR ESTA PARTE PORQUED DEBEMOS INSCRIBIR EN BASE A LAS MATERIAS QUE INSCRIBAMOS EN LA LISTA
-            //ESTO NOS SIRVE PARA PODER HACER LA INSCRIPCIÓN AUTOMATICA
+        function addSubjectPre(subject){
+            var opt = document.createElement('option');
+            opt.value = subject.id;
+            opt.innerHTML = subject.id;                
+            $("#subjectPostOptions")[0].append(opt);
+        }
+
+        function showPreSubject(subject,group){                        
+            console.log("SUBJECT DELETE: ",subject, " GROUP: ",group);
             let size = document.getElementsByTagName("tbody")[1].childNodes.length;                                    
             for(let i=0; i<size;i++){                                                                                
                 if(document.getElementsByTagName("tbody")[1].childNodes[i].nodeName==="TR"){                    
                     let hora = document.getElementsByTagName("tbody")[1].childNodes[i].children[0].innerText;                                
                     if(hora == group.hInicio){
+
                         for(let j=0;j<group.dias.length;j++){                            
                             for(let k=0;k<group.dias.length;k++){                                
-                                document.getElementsByTagName("tbody")[1].childNodes[i].children[semana[group.dias[j]]].innerText= `${subject.id} - ${group.grupo} \n ${group.salon}`;
+                                if(subject==null){                                    
+                                    document.getElementsByTagName("tbody")[1].childNodes[i].children[semana[group.dias[j]]].innerText= '';
+                                }else{
+                                    document.getElementsByTagName("tbody")[1].childNodes[i].children[semana[group.dias[j]]].innerText= `${subject.id} - ${group.grupo} \n ${group.salon}`;
+                                }
+                                
                             }  
                         }                                                                                
                     }
@@ -266,10 +270,45 @@ var plans = (function () {
             }
         }
 
+        function deleteSubject(){            
+            let subjectToDelete = $("#subjectPostOptions").val().toUpperCase();
+            if(subjectToDelete==="SELECCIONAR"){
+                alert("Debes escoger una materia para eliminarla.");
+            }else{
+                let grupo;
+                let newPlan = materiasOpcion.filter(materia => {
+                    console.log("Materia: ",materia);
+                    console.log("materia.subject !== subjectToDelete: ",materia.subject == subjectToDelete);
+                    if(materia.subject == subjectToDelete){
+                        grupo = materia;
+                    }                        
+                    return materia.subject !== subjectToDelete;
+    
+                });
+                
+                materiasOpcion = newPlan;
+                showPreSubject(null,grupo);
+                let options = $("#subjectPostOptions")[0].options;
+                let optionToDelete;
+                for(let i=0;i<options.length;i++){
+                    console.log("option: ",options[i]);
+                    console.log("value: ",options[i].value);
+                    if(subjectToDelete===options[i].value){
+                        optionToDelete = options[i];
+                    }
+                }
+                console.log("eliminar: ",optionToDelete);
+                $("#subjectPostOptions")[0].removeChild(optionToDelete);
+                //console.log("Borrar: ",borrar);
+                alert(`Has elimiado ${subjectToDelete} con éxito.`);
+                console.log("subjectToDelete: ",subjectToDelete);
+            }
+            
+        }
 
         function getSubject(){            
             let materia = $("#subjectPreOptions").val().toUpperCase();
-            console.log("VA A ENTRAR EN GETSUBJEfCT PRE: ",materia);            
+            //console.log("VA A ENTRAR EN GETSUBJEfCT PRE: ",materia);            
             if(materia !== "SELECCIONAR")
                 apiclient.getSubject($("#subjectPreOptions").val().toUpperCase(),_table);
         }
@@ -289,6 +328,7 @@ var plans = (function () {
         getSubject:getSubject,
         redirectToAdminView:redirectToAdminView,                        
         getUser:getUser,
-        savePlan:savePlan
+        savePlan:savePlan,
+        deleteSubject:deleteSubject
     };
 })();
