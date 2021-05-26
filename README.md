@@ -188,7 +188,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “Software-Stark
 
 La planeación de los sprint se realizó en la primera reunión oficial de comienzo del proyecto, en donde se planteó los Sprint a trabajar y una generalidades del proyecto. Luego de eso, en la semana siguiente se comenzó a definir Sprint por Sprint de cada una de las tareas y se realizó una estimación de cuando tiempo tomaría la realización del proyecto y en cuanto tiempo se tendría si se cumpliera con todas las actividades del Sprint en las fechas establecidas.
 
-En total fueron 3 Sprint, y todo el grupo se puso de acuerdo para la asiganacion de tareas y cuáles de ellas se deberían hacer primero. Estableciendo tareas que se deberían realizar antes y que no saldrían si no se hicieran unas antes. Se hizo la utilizacion de controlador de versiones de GitHub para verificar el progreso del proyecto y de cada uno de los estudiantes, asi como el uso de la herramienta Taiga, para el control de Sprints y de tareas.
+En total fueron 3 Sprint, y se conto en el grupo de a 3 personas solo para el sprint 1, de resto el sprint 2 y 3 se realizo de manera independiente con el fin de poder cumplir con todos los requerimiento del proyecto. Se hizo la utilizacion de controlador de versiones de GitHub para verificar el progreso del proyecto y de cada uno de los estudiantes, asi como el uso de la herramienta Taiga, para el control de Sprints y de tareas.
 
 
 ## **TAIGA**
@@ -198,6 +198,9 @@ Mediante este enlace se podra acceder a la Herramienta Taiga y conocer el proces
 [Taiga Software Stark Industries--ECI Horarios](https://tree.taiga.io/project/fabimauri47-eci-horarios/timeline).
 
 ![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Sprints/menu%20taiga.png)
+
+Avance total del proyecto según el planteamiento de tareas y backlog del proyecto, se tiene un avance, como se ve en la siguiente imagen:
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Sprints/backlog%20final%20proyecto.png)
 
 
 ## ***SPRINTS y release-burndown chart***
@@ -252,22 +255,21 @@ Se presento un avance aceptable para el Sprint 1, en donde se pudo ver la defini
 
 Para este Sprint 3 se usuaron las siguientes historias de usuario propuestas, con el fin de comenzar a culminar el proyecto lo mas pronto posible y avanzar en lo que se podia.:
 
-- 
-- 
-- 
-- 
-- 
+- Atributos No funcionales
+- Arquitectura Backend: extendiendo cache
+- Arquitectura FrontEnd: extiendo RealTime
+- análisis estatico de codigo y Pruebas/
 
 
-Para este Sprint 3 se comenzaron a ver los rezagos de los sprint anteriores, .
+Para este Sprint 3 se comenzaron a ver los rezagos de los sprint anteriores, debido a que se conto con un solo deresarrollador para implementar todo el proyecto, pues los demas integrantes decidieron entregar sus proyectos solos y se entrego una por aparte cada uno. En este proyecto se llego a la completitud funcional, asi como la realización de atributos no funcionales, arquitectura backend en cache y no se pudo completar la parte de realtime por falta de tiempo y equipo. pero se llego a completar una buena parte del proyecto. 
 
 
 #### ***Burdown Chart***
 
-![texto cualquiera por si no carga la imagen]()
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Sprints/Sprint%203%20burdown%20chart.png)
 
 #### ***Backlog***
 
-![texto cualquiera por si no carga la imagen]()
+![texto cualquiera por si no carga la imagen](https://github.com/Software-Stark-Industries/ECIHORARIOS-FRONTEND/blob/main/Img/Sprints/Sprint%203%20BackLog.png)
 
- ## **Tecnologías Utilizadas**
+
