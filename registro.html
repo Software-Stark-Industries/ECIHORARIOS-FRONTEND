@@ -4,7 +4,7 @@
 <head>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <title>Login</title>
+    <title>Registro</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--===============================================================================================-->
@@ -38,17 +38,22 @@
     <div class="limiter">
         <div class="container-login100" style="background-image: url('images/bg-02.jpg');">
             <div class="wrap-login100">
-                <h:form id="LoginForm" class="login100-form validate-form">
+                <h:form id="RegisterForm" class="login100-form validate-form">
                     <span class="login100-form-logo">
                         <!--<i class="zmdi zmdi-landscape"></i>-->
                         <img class="manImg" src="images/lock.png"></img>
                     </span>
 
-                    <span class="login100-form-title p-b-34 p-t-27">Log in</span>
+                    <span class="login100-form-title p-b-34 p-t-27">Registro</span>
+
+                    <div class="wrap-input100 validate-input" data-validate="Enter username">
+                        <input class="input100" type="text" id="name" name="name" required minlength="4" maxlength="200" size="10">
+                        <!--<input class="input100" type="text" name="username" placeholder="Username"/>-->
+                        <span class="focus-input100" data-placeholder="&#xf207;"></span>
+                    </div>
 
                     <div class="wrap-input100 validate-input" data-validate="Enter username">
                         <input class="input100" type="text" id="email" name="email" required minlength="4" maxlength="200" size="10">
-
                         <!--<input class="input100" type="text" name="username" placeholder="Username"/>-->
                         <span class="focus-input100" data-placeholder="&#xf207;"></span>
                     </div>
@@ -61,7 +66,7 @@
 
 
                     <div class="text-center">
-                        <button id="login" type="button" onclick="login.doLogin()" class="btn btn-primary" style="background-color:blue;">Connect </button>
+                        <button id="login" type="button" onclick="login.doRegister()" class="btn btn-primary" style="background-color:blue;">Connect </button>
                     </div>
 
                 </h:form>

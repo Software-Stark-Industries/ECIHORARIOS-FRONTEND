@@ -21,6 +21,22 @@ var subjects = (function () {
         }
     }
 
+    function redirectToPreinscription(){
+        if(window.localStorage.getItem('isLogged')===null){
+            alert("No estás logueado");
+        }else{            
+            window.location.href='preinciscipcion_estudiante.html';            
+        }
+    }
+
+    function redirectToInscription(){
+        if(window.localStorage.getItem('isLogged')===null){
+            alert("No estás logueado");
+        }else{            
+            window.location.href='planear_horario.html';            
+        }
+    }
+
         function _map(list){
             var mapList = null;
             return mapList = list.map(function(group){
@@ -67,7 +83,12 @@ var subjects = (function () {
         }
 
         function getSubject(){
-            apiclient.getSubject($("#subject").val(),_table);
+            apiclient.getSubject($("#subject").val().toUpperCase(),_table);
+        }
+
+        function getUser(){
+            console.log("VA A PEDIR EL USUARIO EN SUBJECTS: ",localStorage.getItem('idUser'));
+            apiclient.getUser(localStorage.getItem('email'),_table);
         }
 
     function addSubject(){
@@ -145,6 +166,9 @@ var subjects = (function () {
         getSubject:getSubject,
         redirectToAdminView:redirectToAdminView,
         addSubject:addSubject,
-        addGroup:addGroup
+        addGroup:addGroup,
+        getUser:getUser,
+        redirectToPreinscription:redirectToPreinscription,
+        redirectToInscription:redirectToInscription
     };
 })();

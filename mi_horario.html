@@ -44,12 +44,12 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-10 align-self-end">
-                    <h1 class="text-uppercase text-white font-weight-bold">PREINSCRIPCIÓN MATERIAS</h1>
+                    <h1 class="text-uppercase text-white font-weight-bold">Consultar materias</h1>
                     <hr class="divider my-4" />
                 </div>
                 <div class="col-lg-8 align-self-baseline">
                     <p class="text-white-75 font-weight-light mb-5" align="left">
-                        En este lugar podrá realizar la preinscripción de materias bucandolas por su ID y preinscribiendolas de manera correcta.
+                        En este lugar podrá consultar las materias que desee. Para ello ingrese el id de la materia en el campo que tendrá en la parte de abajo. Obtendrá los grupos disponibles de esa materia.
                     </p>
                 </div>
             </div>
@@ -59,69 +59,116 @@
     <!-- Search Subject-->
     <section class="page-section" id="searchSubject">
         <div class="container">
+            <div class="col-lg-8 text-center">
+                <h1>Tu horario</h1>
+                <p />
+            </div>
             <div class="d-flex justify-content-between">
-                <!--
-                <div class="col-lg-8 text-center">
-
-                </div>-->
-
-
                 <div class="text-center">
 
                     <table class="table table-bordered" id="table_subject">
 
                         <thead class="thead-dark" id="table_header">
                             <tr>
-                                <th scope="col">Materia</th>
-                                <th scope="col">Creditos</th>
-                                <th scope="col">Seleccionar</th>
+                                <th scope="col">Hora</th>
+                                <th scope="col">Lunes</th>
+                                <th scope="col">Martes</th>
+                                <th scope="col">Miercoles</th>
+                                <th scope="col">Jueves</th>
+                                <th scope="col">Viernes</th>
+                                <th scope="col">Sabado</th>
                             </tr>
 
                         </thead>
 
                         <tbody id="table_body">
-
+                            <tr>
+                                <th>7:00</th>
+                                <th>ARSW 1
+                                    <p></p> B-LABIS</th>
+                                <th></th>
+                                <th>FDGP 11
+                                    <p></p> D-202</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>8:30</th>
+                                <th>ARSW 1
+                                    <p></p> B-LABIS</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>10:00</th>
+                                <th>CRTI 5
+                                    <p></p>C-101</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>11:30</th>
+                                <th>CRTI 5
+                                    <p></p>C-101</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>13:00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>TPRO 2
+                                    <p></p> C1-104</th>
+                                </th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>14:30</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>FDGP 11
+                                    <p></p>A-101</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>16:00</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <th>17:30</th>
+                                <th></th>
+                                <th>FDGP 11
+                                    <p></p>D-202</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
                         </tbody>
-
                     </table>
-                    <button id="savePreinscription" type="button" onclick="subjects.savePreinscription()" class="btn btn-info btn-block" style="margin-top: 45%;">Guardar</button>
-
-                </div>
-                <div class="col-lg-8 text-center">
-                    <h2 class="mt-0">Consulta la materia</h2>
-                    <label for="subject">Ingresa el id de la materia</label>
-                    <input type="text" id="subject" name="subject" required minlength="4" maxlength="8" size="10">
-                    <div class="text-center">
-                        <button id="searchGroups" type="button" onclick="subjects.getSubject()" class="btn btn-primary" style="margin-top: 5%;">Buscar</button>
-                    </div>
-                    <br><br/>
-
-                    <div class="card">
-                        <div class="card-header">
-                            <strong>MATERIAS INSCRITAS</strong>
-                        </div>
-
-                        <div class="card-body">
-                            <table class="table table-bordered" id="table_enrolled">
-
-                                <thead class="thead-dark" id="table_header">
-                                    <tr>
-                                        <th scope="col">Materia</th>
-                                        <th scope="col">Creditos</th>
-                                        <th scope="col">Acción</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody id="table_body">
-                                </tbody>
-                        </div>
-                        <div class="card-header" id="creditos"></div>
-
-                    </div>
-
                 </div>
 
             </div>
+            <!--<div class="row"></div>-->
         </div>
 
     </section>

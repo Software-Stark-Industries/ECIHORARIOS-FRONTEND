@@ -9,7 +9,23 @@ var subjects = (function () {
         }
     }
 
+    
+    
+    window.onload = async function(){        
+        let user = await apiclient.getUser(localStorage.getItem('email'));        
+        let subjectsPre = user.preinscription;    
+        console.log("SUBJECTSPRE: ",subjectsPre);   
+        subjectsPre.forEach(subjectPre => {
+            enrollSubject(subjectPre);    
+        });
+        //enrollSubject(subjectsPre);
+        //showSubjects(subjectsPre);
+    };
+
     let subjectsEnrolled = [];
+    let creditosDisponibles = document.getElementById("creditos");
+    let creditosPreinscripcion = localStorage.getItem("creditos");
+    getPreinscriptionCredits();
 
     function redirectToAdminView(){
         if(window.localStorage.getItem('isLogged')===null){
@@ -26,7 +42,7 @@ var subjects = (function () {
         function _map(list){
             var mapList = null;
             return mapList = list.map(function(group){
-                console.log("GROUP FROM BACK: ",group);
+                //console.log("GROUP FROM BACK: ",group);
                 return {
                     grupo:group.id,
                     salon:group.room,
@@ -40,104 +56,82 @@ var subjects = (function () {
         }
 
         function removeSubject(subject){
-            console.log("\n REMOVE SUBJECT LLAMADO MATERIAS INSCRITAS: ",subjectsEnrolled, "\n");
-            
-            //console.log("Entraron en eliminar materia: ",subject);
-            //console.log("GENERAL: ",$("#table_enrolled > tbody")[0]);
-            //const materias = $("#table_enrolled > tbody")[0];
-            const materias = subjectsEnrolled.filter(function(item) {
+            console.log("\n REMOVE SUBJECT LLAMADO MATERIAS INSCRITAS: ",subjectsEnrolled, "\n");            
+            const materias = subjectsEnrolled.filter(function(item) {                
                 return item !== subject
             });
-            //console.log("\n MATERIAS ACTUALIZADAS: ",materias, "\n");
-            showSubjects();
-            /*
-            const materiasNuevas = subjectsEnrolled.map(materia => {
-                console.log("Materia: ",materia);
-                console.log("Materia comparacion: ",materia === subject);
-                materia !== subject? materia: '';
-            });
-            console.log("MATERIAS NUEVAS: ",materiasNuevas);
-            */
-            //let size  = $("#table_enrolled > tbody")[0].childNodes.length-1;
-            //console.log("Size: ",size);
-            //console.log("Tamaño: ",$("#table_enrolled > tbody")[0].childNodes[size]);
-            //let subjectToRemove = $("#table_enrolled > tbody")[0].childNodes[size];
-            //$("#table_enrolled > tbody")[0].removeChild(subjectToRemove);
-            //console.log($("#table_enrolled > tbody")[0].childNodes);
-
+            creditosPreinscripcion+=subject.credits;
+            subjectsEnrolled = materias;
+            getPreinscriptionCredits();            
+            showSubjects(subjectsEnrolled);
         }
 
-        function showSubjects(){
-            //$("#table_enrolled > tbody").empty();        
+        /*
+        * se debe poner mensajes
+         */
+        function showSubjects(subjectsEnrolled){
+            $("#table_enrolled > tbody").empty();                   
+           //console.log("\n En show subjects: ",subjectsEnrolled);   
            
             subjectsEnrolled.forEach(materia => {
+                //console.log("MATERIA: ",materia);
                 $("#table_enrolled > tbody").append(
                     "<tr>" +                        
                     "<td>" + materia.id + "</td>"+    
                     "<td>" + materia.credits + "</td>"+    
                     "<td>"  + "</td>"+    
                     "</tr>"
-                );
-                //const size = document.getElementsByTagName("tbody")[1].childNodes.length-1;
-                const nodos = document.getElementsByTagName("tbody")[1].childNodes;
-                console.log("Longitud nodos: ",nodos.length);
-                console.log("NODOS: ",nodos);
-                for(let i=0;i<nodos.length; i++){        
+                );                
+                
+                const nodos = document.getElementsByTagName("tbody")[1].childNodes;                                
+                let botonesEliminar = [];
+                for(let i=0;i<nodos.length; i++){                       
                     var preinscribirButton = document.createElement("input");
                     preinscribirButton.type = "button";
                     preinscribirButton.value = "Eliminar";
                     preinscribirButton.name = "eliminar";
-                    preinscribirButton.id = "eliminar";
-                    preinscribirButton.addEventListener('click', e => {                    
-                        removeSubject(subject);
+                    preinscribirButton.id = "eliminar"+i;
+                    preinscribirButton.className ="btn btn-danger";
+                    preinscribirButton.addEventListener('click', e => {  
+                        //console.log("ENTRA EN ELIMINAR MATERIA BOTON: ",e);
+                        removeSubject(materia);
                     });                
-                preinscribirButton.className ="btn btn-danger";
-                    console.log("ELEMENTO: ", document.getElementsByTagName("tbody")[1].childNodes[i]);
-                    console.log("Lo que va a modificar: ", document.getElementsByTagName("tbody")[1].childNodes[i]);
-                    document.getElementsByTagName("tbody")[1].childNodes[i].childNodes[2].appendChild(preinscribirButton);
-                }
-                    
-                
-                //console.log("NODES: ",document.getElementsByTagName("tbody")[1].childNodes);
-                //document.getElementsByTagName("tbody")[1].childNodes[size].childNodes[2].appendChild(preinscribirButton);
-            });
-
-           
-            //console.log(document.getElementsByTagName("tbody")[1].childNodes); //[childNodes.length-1]
-            //const size = document.getElementsByTagName("tbody")[1].childNodes.length-1;
-            //console.log("SIZE: ",size);
-            //console.log("NODE ",document.getElementsByTagName("tbody")[1].childNodes[size]);
-            //console.log("NODE HIJO ",document.getElementsByTagName("tbody")[1].childNodes[size].childNodes[2]);
-            //document.getElementsByTagName("tbody")[1].childNodes[size].childNodes[2].appendChild(preinscribirButton);
+                                                                    
+                    let buttons = document.getElementsByTagName("tbody")[1].childNodes[i].childNodes[2].children.length;                    
+                    if(document.getElementsByTagName("tbody")[1].childNodes[i].nodeName==="TR" && buttons<1){                        
+                        document.getElementsByTagName("tbody")[1].childNodes[i].childNodes[2].appendChild(preinscribirButton)
+                        botonesEliminar.push(preinscribirButton);
+                    }                                                   
+                }                                 
+            });                       
         }
 
         function enrollSubject(subject){
-            
-            //console.log("VA A INSCRIBIR LA MATERIA: ",subject);            
-            //console.log("validando: ", subjectsEnrolled.includes(subject));
-            //console.log("MATERIAS: ",subjectsEnrolled);
-            if(!subjectsEnrolled.includes(subject)){
-                subjectsEnrolled.push(subject);
-                
-                showSubjects();
-               
-            }
-            
-            
+            alert(`Has preinscrito ${subject.id} con éxito.`);
+            console.log("VA A INSCRIBIR LA MATERIA: ",subject);                        
+            console.log("MATERIAS: ",subjectsEnrolled);
+
+            if(!subjectsEnrolled.includes(subject)){                
+                if(creditosPreinscripcion-subject.credits>=0){
+                    subjectsEnrolled.push(subject);
+                    creditosPreinscripcion -= subject.credits;
+                    getPreinscriptionCredits();
+                    showSubjects(subjectsEnrolled);                    
+                }else{
+                    alert("Has superado tus creditos de preinscripción.");
+                }                               
+            }                        
             //document.getElementsByTagName("tbody")[1].children.item(preinscribirButton);
         }
 
         function _table(subject){
-            $("#table_subject > tbody").empty();              
+            $("#table_subject > tbody").empty();                          
             var preinscribirButton = document.createElement("input");
             preinscribirButton.type = "button";
             preinscribirButton.value = "Preinscribir";
             preinscribirButton.name = "preinscribir";
             preinscribirButton.id = "preinscribir";
-            preinscribirButton.addEventListener('click', e => {
-                //console.log("Preinscribieron una materia");
-                //console.log("e: ",e);
-                //console.log("MATERIA PREINSCRITA: ",subject.id);
+            preinscribirButton.addEventListener('click', e => {                                
                 enrollSubject(subject);
             });
             
@@ -155,7 +149,7 @@ var subjects = (function () {
             document.getElementsByTagName("tbody")[0].childNodes[size].childNodes[2].appendChild(preinscribirButton);
             
             var listGroups = _map(subject.groups);
-            console.log("SUBJECT FROM BACK: ",listGroups);
+            //console.log("SUBJECT FROM BACK: ",listGroups);
             if (listGroups.length===0) {
                 alert("No se encontraron grupos para esa materia");
             }
@@ -188,7 +182,7 @@ var subjects = (function () {
         }
 
         function getSubject(){
-            apiclient.getSubject($("#subject").val(),_table);
+            apiclient.getSubject($("#subject").val().toUpperCase(),_table);
         }
 
     function addSubject(){
@@ -207,6 +201,25 @@ var subjects = (function () {
             alert("Materia añadida exitosamente");
         });
     }
+
+    function savePreinscription(){
+        console.log("Guardando preinscripción");
+        console.log("Las materias que vamos a guardar son: ",subjectsEnrolled);                
+        apiclient.savePreinscription(subjectsEnrolled).then(function(data, textStatus, request) {
+            alert("¡Materias guardadas éxitosamente!");            
+        });
+    }
+
+
+    function getPreinscriptionCredits(){        
+        creditosDisponibles.innerHTML =`Creditos disponibles: ${creditosPreinscripcion}`;
+    }
+
+    function getUser(){
+        console.log("VA A PEDIR EL USUARIO en Preinscripcion: ",localStorage.getItem('idUser'));
+        apiclient.getUser(localStorage.getItem('email'),_table);
+    }
+    
 
     function addGroup(){
         var subjectInputGroupId = $("#subjectInputGroupId").val();
@@ -238,7 +251,7 @@ var subjects = (function () {
             const checked =  dia.checked;
             if(checked) diasCurso.push(dia.value);
         });
-        console.log("Dias de curso: ",diasCurso);
+        //console.log("Dias de curso: ",diasCurso);
 
  
         
@@ -252,7 +265,7 @@ var subjects = (function () {
             hourOfEnd:groupInputHFin,
             dias:diasCurso        
         };
-        console.log("GROUP: ",group);
+        //console.log("GROUP: ",group);
         
         apiclient.addGroup(group,subjectInputGroupId).then(function(data, textStatus, request) {
             alert("Grupo añadido exitosamente");
@@ -266,6 +279,8 @@ var subjects = (function () {
         getSubject:getSubject,
         redirectToAdminView:redirectToAdminView,
         addSubject:addSubject,
-        addGroup:addGroup
+        addGroup:addGroup,
+        savePreinscription:savePreinscription,
+        getUser:getUser
     };
 })();
